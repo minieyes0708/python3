@@ -26,6 +26,8 @@ IGNORE_FOLDER = ['backup',\
 IGNORE_EXT = ['torrent','gif','chm','jpeg','mht','fb!','exe']
 BACKUP_EXT = ['rar', 'mkv', 'wmv', 'mp4', 'rmvb', 'zip', 'avi','iso']
 
+# git diff tool test
+
 def getFileList(folder):
     files = []
     dirs = [folder]

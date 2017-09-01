@@ -3,3 +3,7 @@
 *.dir
 .svn/
 *.txt
+*.bak
+*.dat
+*.dir
+*.swp

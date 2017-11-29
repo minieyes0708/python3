@@ -21,7 +21,7 @@ def moveext(exts):
         for file in filterext(ext):
             print('moving ' + file)
             name = os.path.basename(file)
-            shutil.move(file, os.path.join(r'J:\tmp\emule', name))
+            shutil.move(file, os.path.join(r'D:\tmp\emule', name))
 
 def removeext(exts):
     for ext in exts:

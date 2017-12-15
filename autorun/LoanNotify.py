@@ -8,7 +8,7 @@ sys.path.append('.')
 today = datetime.now()
 if today.day >= 14 and today.day <= 18:
     lastdate = ''
-    if os.path.isfile('./autorun/LoadNotify.txt'):
+    if os.path.isfile('./autorun/LoanNotify.txt'):
         with open('./autorun/LoanNotify.txt') as file:
             lastdate = file.readline()
     if lastdate != str(today.year) + str(today.month):

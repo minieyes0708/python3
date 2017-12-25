@@ -9,3 +9,6 @@ os.system('START "" DUC40.exe')
 
 os.chdir(r"L:\XAMPPPortable")
 os.system('START "" xampp-control.exe')
+
+os.chdir(r"L:\UltraVNC")
+os.system('START "" winvnc.exe')

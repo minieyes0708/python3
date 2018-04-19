@@ -22,7 +22,7 @@ def start_and_login():
 def get_mega_links(web):
     url = [val.get_attribute('href') for val in web.find_elements_by_tag_name('a') if 'mega' in val.text and 'https://mega.nz' in val.get_attribute('href')]
     groups = [re.search('【影片載點】：([^\n]+)', val.text) for val in web.find_elements_by_tag_name('td') if '影片載點' in val.text]
-    url.extend([grp.group(1) for grp in groups if grp != None and grp.groups != None and 'https://mega.nz' in grp.group(1)])
+    url.extend([grp.group(1) for grp in groups if grp != None and grp.groups != None and ('https://mega.nz' in grp.group(1) or 'https://drives.google' in grp.group(1))])
     return url
 
 def get_passwords(web):

@@ -31,8 +31,8 @@ def initialize(web, url):
     if url == None:
         web.get("http://www05.eyny.com/forum-576-1.html");
         (wait_for(web,'name','submit')).click()
-##        (wait_for(web,'link_text','本土電影(上傳空間)')).click()
-        (wait_for(web,'link_text','日韓電影(上傳空間)')).click()
+        (wait_for(web,'link_text','本土電影(上傳空間)')).click()
+##        (wait_for(web,'link_text','日韓電影(上傳空間)')).click()
     else:
         web.get(url)
         (wait_for(web,'name','submit')).click()

@@ -20,14 +20,14 @@ def start_and_login():
             web.quit()
 
 def get_mega_links(web):
-    url = [val.get_attribute('href') for val in web.find_elements_by_tag_name('a') if 'mega' in val.text and 'https://mega.nz' in val.get_attribute('href')]
-    groups = [re.search('【影片載點】：([^\n]+)', val.text) for val in web.find_elements_by_tag_name('td') if '影片載點' in val.text]
+    url = [val.get_attribute('href') for val in web.find_elements_by_tag_name('a') if 'mega' in val.text or (val.get_attribute('href') != None and 'https://mega.nz' in val.get_attribute('href'))]
+    groups = [re.search('(.*載點[^\n]+)', val.text) for val in web.find_elements_by_tag_name('td') if '影片載點' in val.text]
     url.extend([grp.group(1) for grp in groups if grp != None and grp.groups != None and ('https://mega.nz' in grp.group(1) or 'https://drives.google' in grp.group(1))])
     return url
 
 def get_passwords(web):
     result = []
-    groups = [re.search('【解壓密碼】：([^\n]+)', val.text) for val in web.find_elements_by_tag_name('td') if '解壓密碼' in val.text]
+    groups = [re.search('(.*密碼[^\n]+)', val.text) for val in web.find_elements_by_tag_name('td') if '密碼' in val.text]
     return [grp.group(1) for grp in groups if grp != None and grp.groups != None]
 
 ############
@@ -63,6 +63,9 @@ while True:
                 file.write('\n'.join(url) + '\n')
                 file.write('\n'.join(get_passwords(web)) + '\n')
                 file.close()
+                print('link = ' + link + '\n')
+                print('\n'.join(url) + '\n')
+                print('\n'.join(get_passwords(web)) + '\n')
                 count = count + 1
             del tododb[keys[index]]
             index = index + 1

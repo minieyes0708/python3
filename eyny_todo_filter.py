@@ -27,7 +27,7 @@ def get_mega_links(web):
 
 def get_passwords(web):
     result = []
-    groups = [re.search('(.*密碼[^\n]+)', val.text) for val in web.find_elements_by_tag_name('td') if '密碼' in val.text]
+    groups = [re.search('(.*解壓密碼[^\n]+)', val.text) for val in web.find_elements_by_tag_name('td') if '解壓密碼' in val.text]
     return [grp.group(1) for grp in groups if grp != None and grp.groups != None]
 
 ############

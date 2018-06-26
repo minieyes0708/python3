@@ -8,3 +8,4 @@
 *.dir
 *.swp
 .svnignore
+__pycache__/

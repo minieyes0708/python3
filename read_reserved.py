@@ -4,7 +4,7 @@ with open('reserved.txt', 'r') as file:
     reserved = [int(id.strip()) for id in file.readlines() if len(id) == 5]
 
 reserved.sort()
-reserved = list(set(reserved).difference(reserved))
+reserved = list(set(reserved))
 
 web = webdriver.Chrome()
 

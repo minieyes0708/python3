@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-with open('stock.txt', 'r') as file:
+with open('stocks.txt', 'r') as file:
     stocks = [int(id.strip()) for id in file.readlines() if len(id) == 5]
 with open('reserved.txt', 'r') as file:
     reserved = [int(id.strip()) for id in file.readlines() if len(id) == 5]

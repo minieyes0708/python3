@@ -12,10 +12,11 @@ web = webdriver.Chrome()
 
 command = ''
 while command != 'q' and len(stocks) != 0:
-    web.get('http://www.cmoney.tw/finance/f00025.aspx?s=' + str(stocks[0]))
+    stock_id = stocks[0]
+    web.get('http://www.cmoney.tw/finance/f00025.aspx?s=' + str(stock_id))
     web.execute_script("window.scrollTo(0,250);");
     del stocks[0]
-    command = input('(q to quit) (%d) >> ' % (len(stocks)))
+    command = input('(q to quit) (%d)(%d) >> ' % (len(stocks), stock_id))
 
 web.quit()
 

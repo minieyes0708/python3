@@ -22,7 +22,7 @@ while len(reserved) != 0:
             if len(btns) != 0:
                 btns[0].click()
                 break
-        except selenium.common.exception.StaleElementReferenceException as err:
+        except selenium.common.exceptions.StaleElementReferenceException as err:
             pass
     web.switch_to_default_content()
     web.execute_script("window.scrollTo(0,250);");

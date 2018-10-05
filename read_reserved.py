@@ -13,6 +13,7 @@ while len(reserved) != 0:
     print(len(reserved))
     stock_id = reserved[0]
     web.get('http://www.cmoney.tw/finance/f00025.aspx?s=' + str(stock_id))
+    web.find_element_by_link_text('K線').click()
     frames = web.find_elements_by_tag_name('iframe')
     for frame_ind in range(len(frames)):
         try:

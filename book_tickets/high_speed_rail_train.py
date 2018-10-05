@@ -18,6 +18,7 @@ BookMethod1 = True         # 直接輸入車次
 ToTrainIdInputField = '813'
 
 TicketAmount0 = 1          # 全票幾張?
+TicketAmount1 = 1          # 孩童票幾張?
 
 IdNumber = 'a123456789'
 MobilePhone = '0123456789'
@@ -55,6 +56,8 @@ def BookTicket():
             backTimeTable.select_by_visible_text(BackTimeTable)
     ticketAmount0 = Select(web.find_element_by_name('ticketPanel:rows:0:ticketAmount'))
     ticketAmount0.select_by_visible_text(str(TicketAmount0))
+    ticketAmount1 = Select(web.find_element_by_name('ticketPanel:rows:1:ticketAmount'))
+    ticketAmount1.select_by_visible_text(str(TicketAmount1))
 
 def FillUserInfo():
     idNumber = web.find_element_by_id('idNumber')

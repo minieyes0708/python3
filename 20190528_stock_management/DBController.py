@@ -2,10 +2,12 @@
 class DBController:
     def __init__(self):
         self.db = None
+        self.cursor = None
 
     def open(self):
         import pymysql
         self.db = pymysql.connect('localhost', 'root', 'shenfen520', '20190528_stock_management')
+        self.cursor = self.db.cursor()
 
     def __enter__(self):
         self.open()
@@ -18,6 +20,7 @@ class DBController:
         self.close()
 
     def execute(self, cmd):
-        cursor = self.db.cursor()
-        cursor.execute(cmd)
-        cursor.close()
+        self.cursor.execute(cmd)
+
+    def commit(self):
+        self.db.commit()

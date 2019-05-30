@@ -3,7 +3,7 @@ class WebController:
     def __init__(self):
         self.web = None
         self.sql_cmd = '''
-        INSERT INTO `everyday_close_info` VALUES(
+        INSERT INTO `everyday_close_info` VALUES(NULL,
         "{date_info}", "{stock_id}", "{stock_name}", {deal_stock_count}, 
         "{open_price}", "{highest_price}", "{lowest_price}", "{close_price}", "{rise_fall}")
         '''
@@ -88,7 +88,6 @@ class WebController:
                 }
                 record = self.sql_cmd.format(**values)
                 self.records.append(record)
-                print(record)
 
     def select_type_by_index(self, index):
         from selenium.webdriver.support.ui import Select
@@ -109,11 +108,24 @@ class WebController:
     def search(self):
         self.web.find_element_by_link_text('查詢').click()
 
+    def is_holiday(self):
+        self.select_type_by_index(19)
+        self.search()
+        self.wait_page_loading()
+        if self.is_no_records():
+            return True
+        else:
+            return False
+
     def update_all_types(self):
         from selenium.webdriver.support.ui import Select
+        if self.is_holiday():
+            print(str(self.get_selected_date()) + ' is holiday')
+            return
         select_type = Select(self.web.find_element_by_name('type'))
-        for typeIndex in range(len(select_type.options)):
-            print('processing {0}'.format(select_type.options[typeIndex].text))
+        total_count = len(select_type.options)
+        for typeIndex in range(18, total_count):
+            print('processing {0} ({1}/{2})'.format(select_type.options[typeIndex].text, typeIndex, total_count))
             select_type.select_by_index(typeIndex)
             self.search()
             self.wait_page_loading()

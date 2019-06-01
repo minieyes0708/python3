@@ -52,7 +52,7 @@ class DBController:
         if end_date == None:
             end_date = date.today()
         return self.fetchall('''
-        SELECT `date_info`, `stock_name`, `open_price`, `highest_price`, `lowest_price`, `close_price`, `rise_fall` FROM {tbl_name}
+        SELECT `date_info`, `stock_name`, `deal_stock_count`, `open_price`, `highest_price`, `lowest_price`, `close_price`, `rise_fall` FROM {tbl_name}
         WHERE `stock_id` = "{stock_id}" AND `date_info` >= "{start_date}" AND `date_info` <= "{end_date}"
         GROUP BY `date_info`
         ORDER BY `date_info`

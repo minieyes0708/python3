@@ -3,21 +3,32 @@ from functools import partial
 from datetime import date, timedelta
 from DBController import DBController
 
+
 def rise_2_percent(stock_info, days):
     if len(stock_info) < days:
         return False
 
     rise_fall = []
     for day in range(days):
-        rise_fall.append(float(stock_info[-1 * (day + 1)]['rise_fall'].replace('X','')))
+        rise_fall.append(float(stock_info[-(day + 1)]['rise_fall'].replace('X','')))
 
     if all(map(lambda x: x > 2, rise_fall)):
         return True
     else:
         return False
 
+
+def deal_count_max(stock_info, now_days, past_days):
+    max_deal_count = max([info['deal_stock_count'] for info in stock_info[-past_days:]])
+    if max_deal_count in [info['deal_stock_count'] for info in stock_info[-now_days:]]:
+        return True
+    else:
+        return False
+
+
 filters = (
     partial(rise_2_percent, days = 2),
+    partial(deal_count_max, now_days = 3, past_days = 30),
 )
 
 passed_stocks = []

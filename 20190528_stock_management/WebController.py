@@ -87,7 +87,8 @@ class WebController:
                     'rise_fall': tds[rise_fall_col1].text + tds[rise_fall_col2].text
                 }
                 record = self.sql_cmd.format(**values)
-                self.records.append(record)
+                if record not in self.records:
+                    self.records.append(record)
 
     def select_type_by_index(self, index):
         from selenium.webdriver.support.ui import Select

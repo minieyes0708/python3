@@ -9,7 +9,7 @@ class DBController:
     def open(self):
         import pymysql
         self.db = pymysql.connect('localhost', 'root', 'shenfen520', self.db_name)
-        self.cursor = self.db.cursor()
+        self.cursor = self.db.cursor(pymysql.cursors.DictCursor)
 
     def __enter__(self):
         self.open()
@@ -36,4 +36,29 @@ class DBController:
         return self.cursor.fetchall()
 
     def last_date(self):
-        return self.fetchone('SELECT MAX(`date_info`) FROM ' + self.tbl_name)[0]
+        return self.fetchone('SELECT MAX(`date_info`) FROM ' + self.tbl_name)['MAX(`date_info`)']
+
+    def first_date(self):
+        return self.fetchone('SELECT MIN(`date_info`) FROM ' + self.tbl_name)['MIN(`date_info`)']
+
+    def get_stock_id_list(self):
+        cmd = 'SELECT `stock_id` FROM ' + self.tbl_name + ' GROUP BY `stock_id`'
+        return [id['stock_id'] for id in self.fetchall(cmd)]
+
+    def get_stock_info_by_id(self, stock_id, start_date = None, end_date = None):
+        from datetime import date
+        if start_date == None:
+            start_date = self.first_date()
+        if end_date == None:
+            end_date = date.today()
+        return self.fetchall('''
+        SELECT `date_info`, `stock_name`, `open_price`, `highest_price`, `lowest_price`, `close_price`, `rise_fall` FROM {tbl_name}
+        WHERE `stock_id` = "{stock_id}" AND `date_info` >= "{start_date}" AND `date_info` <= "{end_date}"
+        GROUP BY `date_info`
+        ORDER BY `date_info`
+        '''.format(**{
+            'tbl_name': self.tbl_name,
+            'stock_id': stock_id,
+            'start_date': start_date,
+            'end_date': end_date,
+        }))

@@ -4,12 +4,12 @@ from WebController import WebController
 from DBController import DBController
 from datetime import timedelta, date
 
-cur_date = date(2019, 1, 29)
-last_date = date(2019, 1, 30)
 
 with WebController() as web:
     with DBController() as db:
-        while cur_date != last_date:
+        cur_date = db.last_date()
+        last_date = date.today()
+        while cur_date != last_date + timedelta(1):
             start_time = time.clock()
             print('processing date = ', str(cur_date))
             web.select_date(cur_date)

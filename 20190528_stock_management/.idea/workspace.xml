@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc9a948-e892-4735-89e2-b076297d5e1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../read_reserved.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../read_stocks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_reserved.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_reserved.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_stocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_stocks.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,9 +15,20 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DBController.py">
+        <entry file="file://$PROJECT_DIR$/filter_stock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1116" />
+            <state relative-caret-position="496">
+              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#161#438#0" />
+                <element signature="e#498#721#0" />
+                <element signature="e#913#1457#0" />
+                <element signature="e#1044#1457#0" />
+                <element signature="e#1309#1394#0" />
+                <element signature="e#1357#1394#0" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -38,8 +50,8 @@
         <option value="$PROJECT_DIR$/update_database.py" />
         <option value="$PROJECT_DIR$/WebController.py" />
         <option value="$PROJECT_DIR$/remove_duplicated_db_item.py" />
-        <option value="$PROJECT_DIR$/filter_stock.py" />
         <option value="$PROJECT_DIR$/DBController.py" />
+        <option value="$PROJECT_DIR$/filter_stock.py" />
       </list>
     </option>
   </component>
@@ -53,7 +65,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -65,6 +76,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,6 +235,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20295984" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -338,20 +351,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DBController.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/filter_stock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        <state relative-caret-position="496">
+          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#118#443#0" />
+            <element signature="e#161#438#0" />
+            <element signature="e#498#721#0" />
+            <element signature="e#913#1457#0" />
+            <element signature="e#1044#1457#0" />
+            <element signature="e#1309#1394#0" />
+            <element signature="e#1357#1394#0" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1116" />
       </provider>
     </entry>
   </component>

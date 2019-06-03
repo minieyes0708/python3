@@ -4,7 +4,7 @@ from selenium import webdriver
 with open('reserved.txt', 'r') as file:
     reserved = set([int(stock_id.strip()) for stock_id in file.readlines()])
 with open('stocks.txt', 'r') as file:
-    stocks =set([int(stock_id.strip()) for stock_id in file.readlines()]).difference(reserved)
+    stocks =list(set([int(stock_id.strip()) for stock_id in file.readlines()]).difference(reserved))
 
 web = webdriver.Chrome()
 

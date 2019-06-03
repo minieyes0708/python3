@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc9a948-e892-4735-89e2-b076297d5e1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/DBController.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter_stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/filter_stock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_stocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_stocks.py" afterDir="false" />
     </list>
@@ -15,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/filter_stock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="50" column="80" lean-forward="true" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
+            <state relative-caret-position="155">
+              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#166#443#0" />
@@ -30,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+            <state relative-caret-position="238">
+              <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
               <folding>
                 <element signature="e#74#214#0" />
                 <element signature="e#244#406#0" />
@@ -47,6 +46,8 @@
                 <element signature="e#841#903#0" />
                 <element signature="e#938#1027#0" />
                 <element signature="e#1063#1152#0" />
+                <element signature="e#1195#1328#0" />
+                <element signature="e#1420#2113#0" />
               </folding>
             </state>
           </provider>
@@ -69,9 +70,9 @@
       <list>
         <option value="$PROJECT_DIR$/WebController.py" />
         <option value="$PROJECT_DIR$/remove_duplicated_db_item.py" />
-        <option value="$PROJECT_DIR$/filter_stock.py" />
         <option value="$PROJECT_DIR$/update_database.py" />
         <option value="$PROJECT_DIR$/DBController.py" />
+        <option value="$PROJECT_DIR$/filter_stock.py" />
       </list>
     </option>
   </component>
@@ -248,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559568439976</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add highest_price filter&#10;&#10;- when comparing None in if statement, simply use not&#10;- rise_percent can now input percentage&#10;- max_deal_count check if rise_fall is negative&#10;  Or Should I?&#10;- stock_info get from last 60 days&#10;- print executation time">
+      <created>1559568946594</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1559568946594</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -262,6 +270,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20295984" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -330,7 +339,8 @@
     <MESSAGE value="add remove_duplicated_db_item" />
     <MESSAGE value="add deal_count_max filter&#10;&#10;- get_stock_info should also get deal_stock_count field" />
     <MESSAGE value="update_database should start from last_date + 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_database should start from last_date + 1" />
+    <MESSAGE value="add highest_price filter&#10;&#10;- when comparing None in if statement, simply use not&#10;- rise_percent can now input percentage&#10;- max_deal_count check if rise_fall is negative&#10;  Or Should I?&#10;- stock_info get from last 60 days&#10;- print executation time" />
+    <option name="LAST_COMMIT_MESSAGE" value="add highest_price filter&#10;&#10;- when comparing None in if statement, simply use not&#10;- rise_percent can now input percentage&#10;- max_deal_count check if rise_fall is negative&#10;  Or Should I?&#10;- stock_info get from last 60 days&#10;- print executation time" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WebController.py">
@@ -378,23 +388,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/filter_stock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="50" column="80" lean-forward="true" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#166#443#0" />
-            <element signature="e#498#733#0" />
-            <element signature="e#854#1139#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        <state relative-caret-position="238">
+          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
           <folding>
             <element signature="e#74#214#0" />
             <element signature="e#244#406#0" />
@@ -407,6 +404,21 @@
             <element signature="e#841#903#0" />
             <element signature="e#938#1027#0" />
             <element signature="e#1063#1152#0" />
+            <element signature="e#1195#1328#0" />
+            <element signature="e#1420#2113#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filter_stock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#166#443#0" />
+            <element signature="e#498#733#0" />
+            <element signature="e#854#1139#0" />
           </folding>
         </state>
       </provider>

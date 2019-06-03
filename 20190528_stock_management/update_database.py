@@ -7,9 +7,9 @@ from datetime import timedelta, date
 
 with WebController() as web:
     with DBController() as db:
-        cur_date = db.last_date()
+        cur_date = db.last_date() + timedelta(1)
         last_date = date.today()
-        while cur_date != last_date + timedelta(1):
+        while cur_date <= last_date:
             start_time = time.clock()
             print('processing date = ', str(cur_date))
             web.select_date(cur_date)

@@ -47,9 +47,9 @@ class DBController:
 
     def get_stock_info_by_id(self, stock_id, start_date = None, end_date = None):
         from datetime import date
-        if start_date == None:
+        if not start_date:
             start_date = self.first_date()
-        if end_date == None:
+        if not end_date:
             end_date = date.today()
         return self.fetchall('''
         SELECT `date_info`, `stock_name`, `deal_stock_count`, `open_price`, `highest_price`, `lowest_price`, `close_price`, `rise_fall` FROM {tbl_name}

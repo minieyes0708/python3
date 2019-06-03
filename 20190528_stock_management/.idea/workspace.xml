@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcc9a948-e892-4735-89e2-b076297d5e1a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/DBController.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter_stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/filter_stock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_reserved.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_reserved.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_stocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_stocks.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,19 +15,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/filter_stock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+            <state relative-caret-position="713">
+              <caret line="50" column="80" lean-forward="true" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#161#438#0" />
-                <element signature="e#498#721#0" />
-                <element signature="e#913#1457#0" />
-                <element signature="e#1044#1457#0" />
-                <element signature="e#1309#1394#0" />
-                <element signature="e#1357#1394#0" />
+                <element signature="e#166#443#0" />
+                <element signature="e#498#733#0" />
+                <element signature="e#854#1139#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+              <folding>
+                <element signature="e#74#214#0" />
+                <element signature="e#244#406#0" />
+                <element signature="e#441#472#0" />
+                <element signature="e#503#518#0" />
+                <element signature="e#579#591#0" />
+                <element signature="e#629#653#0" />
+                <element signature="e#685#701#0" />
+                <element signature="e#740#802#0" />
+                <element signature="e#841#903#0" />
+                <element signature="e#938#1027#0" />
+                <element signature="e#1063#1152#0" />
               </folding>
             </state>
           </provider>
@@ -47,11 +67,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/update_database.py" />
         <option value="$PROJECT_DIR$/WebController.py" />
         <option value="$PROJECT_DIR$/remove_duplicated_db_item.py" />
-        <option value="$PROJECT_DIR$/DBController.py" />
         <option value="$PROJECT_DIR$/filter_stock.py" />
+        <option value="$PROJECT_DIR$/update_database.py" />
+        <option value="$PROJECT_DIR$/DBController.py" />
       </list>
     </option>
   </component>
@@ -163,8 +183,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.filter_stock" />
-        <item itemvalue="Python.remove_duplicated_db_item" />
         <item itemvalue="Python.update_database" />
+        <item itemvalue="Python.remove_duplicated_db_item" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559397859927</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update_database should start from last_date + 1">
+      <created>1559568439976</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1559568439976</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -235,9 +262,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20295984" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20295984" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -247,10 +273,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295711" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.31264108" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.31264108" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295711" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.43115124" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.34311512" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -303,7 +329,8 @@
     <MESSAGE value="added filter_stock&#10;&#10;- DBController cursor use DictCursor&#10;- DBController added first_date, get_stock_id_list, get_stock_info_by_id&#10;- now can only filter rise_2_percent&#10;- WebController will check if record is already in records before append" />
     <MESSAGE value="add remove_duplicated_db_item" />
     <MESSAGE value="add deal_count_max filter&#10;&#10;- get_stock_info should also get deal_stock_count field" />
-    <option name="LAST_COMMIT_MESSAGE" value="add deal_count_max filter&#10;&#10;- get_stock_info should also get deal_stock_count field" />
+    <MESSAGE value="update_database should start from last_date + 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_database should start from last_date + 1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WebController.py">
@@ -343,29 +370,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/update_database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="341">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
           <folding>
             <element signature="e#22#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBController.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/filter_stock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+        <state relative-caret-position="713">
+          <caret line="50" column="80" lean-forward="true" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#161#438#0" />
-            <element signature="e#498#721#0" />
-            <element signature="e#913#1457#0" />
-            <element signature="e#1044#1457#0" />
-            <element signature="e#1309#1394#0" />
-            <element signature="e#1357#1394#0" />
+            <element signature="e#166#443#0" />
+            <element signature="e#498#733#0" />
+            <element signature="e#854#1139#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+          <folding>
+            <element signature="e#74#214#0" />
+            <element signature="e#244#406#0" />
+            <element signature="e#441#472#0" />
+            <element signature="e#503#518#0" />
+            <element signature="e#579#591#0" />
+            <element signature="e#629#653#0" />
+            <element signature="e#685#701#0" />
+            <element signature="e#740#802#0" />
+            <element signature="e#841#903#0" />
+            <element signature="e#938#1027#0" />
+            <element signature="e#1063#1152#0" />
           </folding>
         </state>
       </provider>

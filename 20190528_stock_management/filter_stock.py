@@ -5,14 +5,15 @@ from DBController import DBController
 
 
 def rise_percent(stock_info, percent, days):
-    if len(stock_info) < days:
-        return False
+    if len(stock_info) < days: return False
 
-    rise_fall = []
-    for day in range(days):
-        rise_fall.append(float(stock_info[-(day + 1)]['rise_fall'].replace('X','')))
+    rise_fall = [stock_info[-(day + 1)]['rise_fall'].replace('X','') for day in range(days)]
+    open_price = [stock_info[-(day + 1)]['open_price'].replace(',','') for day in range(days)]
 
-    if all(map(lambda x: x > percent, rise_fall)):
+    if '--' in open_price: return False
+
+    rise_fall_percentage = [float(rf) * 100 / float(op) for (rf, op) in zip(rise_fall, open_price)]
+    if all(map(lambda x: x > percent, rise_fall_percentage)):
         return True
     else:
         return False
@@ -36,8 +37,8 @@ def highest_price_max(stock_info, now_days, past_days):
 
 filters = (
     partial(rise_percent, percent = 1, days = 2),
-    partial(deal_count_max, now_days = 3, past_days = 60),
-    partial(highest_price_max, now_days = 3, past_days = 60),
+    partial(deal_count_max, now_days = 3, past_days = 30),
+    partial(highest_price_max, now_days = 3, past_days = 30),
 )
 
 passed_stocks = []

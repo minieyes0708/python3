@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcc9a948-e892-4735-89e2-b076297d5e1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_stocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/capture_stocks.py" afterDir="false" />
-    </list>
+    <list default="true" id="fcc9a948-e892-4735-89e2-b076297d5e1a" name="Default Changelist" comment="add highest_price filter&#10;&#10;- when comparing None in if statement, simply use not&#10;- rise_percent can now input percentage&#10;- max_deal_count check if rise_fall is negative&#10;  Or Should I?&#10;- stock_info get from last 60 days&#10;- print executation time" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/filter_stock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+            <state relative-caret-position="52">
+              <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#166#443#0" />
@@ -285,7 +281,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.31264108" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295711" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.34311512" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.34311512" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -412,8 +408,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/filter_stock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+        <state relative-caret-position="52">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#166#443#0" />

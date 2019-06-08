@@ -15,7 +15,7 @@ with StockExchangeWebController() as web:
             web.select_date(cur_date)
             web.update_all_types()
             print('All Record Count = ', len(web.records))
-            for cmd in web.records:
+            for cmd in web.records.values():
                 db.execute(cmd)
             db.commit()
             web.records.clear()

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcc9a948-e892-4735-89e2-b076297d5e1a" name="Default Changelist" comment="add highest_price filter&#10;&#10;- when comparing None in if statement, simply use not&#10;- rise_percent can now input percentage&#10;- max_deal_count check if rise_fall is negative&#10;  Or Should I?&#10;- stock_info get from last 60 days&#10;- print executation time" />
+    <list default="true" id="fcc9a948-e892-4735-89e2-b076297d5e1a" name="Default Changelist" comment="Remove WebControler name to StockExchangeWebController">
+      <change afterPath="$PROJECT_DIR$/OverTheCounterWebController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StockExchangeWebController.py" beforeDir="false" afterPath="$PROJECT_DIR$/StockExchangeWebController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/update_database.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,39 +16,70 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/filter_stock.py">
+        <entry file="file://$PROJECT_DIR$/StockExchangeWebController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+            <state relative-caret-position="31">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#166#443#0" />
-                <element signature="e#498#733#0" />
-                <element signature="e#854#1139#0" />
+                <element signature="e#127#364#0" />
+                <element signature="e#420#574#0" />
+                <element signature="e#609#640#0" />
+                <element signature="e#671#686#0" />
+                <element signature="e#749#761#0" />
+                <element signature="e#800#926#0" />
+                <element signature="e#969#1163#0" />
+                <element signature="e#1078#1163#0" />
+                <element signature="e#1212#1535#0" />
+                <element signature="e#1578#2031#0" />
+                <element signature="e#2080#3991#0" />
+                <element signature="e#4077#4236#0" />
+                <element signature="e#4280#4436#0" />
+                <element signature="e#4486#4807#0" />
+                <element signature="e#4839#4887#0" />
+                <element signature="e#4923#5103#0" />
+                <element signature="e#5145#5800#0" />
+                <element signature="e#5236#5307#0" />
+                <element signature="e#5484#5800#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBController.py">
+        <entry file="file://$PROJECT_DIR$/OverTheCounterWebController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+            <state relative-caret-position="312">
+              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
               <folding>
-                <element signature="e#74#214#0" />
-                <element signature="e#244#406#0" />
-                <element signature="e#441#472#0" />
-                <element signature="e#503#518#0" />
-                <element signature="e#579#591#0" />
-                <element signature="e#629#653#0" />
-                <element signature="e#685#701#0" />
-                <element signature="e#740#802#0" />
-                <element signature="e#841#903#0" />
-                <element signature="e#938#1027#0" />
-                <element signature="e#1063#1152#0" />
-                <element signature="e#1195#1328#0" />
-                <element signature="e#1420#2113#0" />
+                <element signature="e#105#342#0" />
+                <element signature="e#501#569#0" />
+                <element signature="e#690#721#0" />
+                <element signature="e#752#767#0" />
+                <element signature="e#830#842#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/update_database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#22#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding>
+                <element signature="e#22#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,14 +101,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/WebController.py" />
-        <option value="$PROJECT_DIR$/remove_duplicated_db_item.py" />
-        <option value="$PROJECT_DIR$/update_database.py" />
         <option value="$PROJECT_DIR$/DBController.py" />
         <option value="$PROJECT_DIR$/filter_stock.py" />
+        <option value="$PROJECT_DIR$/StockExchangeWebController.py" />
+        <option value="$PROJECT_DIR$/OverTheCounterWebController.py" />
+        <option value="$PROJECT_DIR$/update_database.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/remove_duplicated_db_item.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1032" />
   </component>
@@ -82,6 +122,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,11 +130,40 @@
               <item name="20190528_stock_management" type="b2602c69:ProjectViewProjectNode" />
               <item name="20190528_stock_management" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="20190528_stock_management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="20190528_stock_management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="20190528_stock_management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Python36" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="20190528_stock_management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Python36" type="462c0819:PsiDirectoryNode" />
+              <item name="minieyes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="20190528_stock_management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (2) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="Python36" type="462c0819:PsiDirectoryNode" />
+              <item name="minieyes" type="462c0819:PsiDirectoryNode" />
+              <item name="20190528_stock_management" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -113,7 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.filter_stock">
+  <component name="RunManager" selected="Python.test">
     <configuration name="filter_stock" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="20190528_stock_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,6 +226,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="20190528_stock_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="update_database" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="20190528_stock_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,9 +270,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.remove_duplicated_db_item" />
         <item itemvalue="Python.filter_stock" />
         <item itemvalue="Python.update_database" />
-        <item itemvalue="Python.remove_duplicated_db_item" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559568946594</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Remove WebControler name to StockExchangeWebController">
+      <created>1559976138004</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1559976138004</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -271,17 +370,18 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20295984" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295711" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947146" visible="true" weight="0.3295711" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295711" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.31264108" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295711" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.34311512" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49947146" weight="0.31264108" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49947146" weight="0.3295711" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010571" side_tool="true" weight="0.34311512" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4989429" weight="0.34311512" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -336,57 +436,23 @@
     <MESSAGE value="add deal_count_max filter&#10;&#10;- get_stock_info should also get deal_stock_count field" />
     <MESSAGE value="update_database should start from last_date + 1" />
     <MESSAGE value="add highest_price filter&#10;&#10;- when comparing None in if statement, simply use not&#10;- rise_percent can now input percentage&#10;- max_deal_count check if rise_fall is negative&#10;  Or Should I?&#10;- stock_info get from last 60 days&#10;- print executation time" />
-    <option name="LAST_COMMIT_MESSAGE" value="add highest_price filter&#10;&#10;- when comparing None in if statement, simply use not&#10;- rise_percent can now input percentage&#10;- max_deal_count check if rise_fall is negative&#10;  Or Should I?&#10;- stock_info get from last 60 days&#10;- print executation time" />
+    <MESSAGE value="Remove WebControler name to StockExchangeWebController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove WebControler name to StockExchangeWebController" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebController.py">
+    <entry file="file://$PROJECT_DIR$/filter_stock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+        <state relative-caret-position="620">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="e#75#377#0" />
-            <element signature="e#114#351#0" />
-            <element signature="e#407#561#0" />
-            <element signature="e#596#627#0" />
-            <element signature="e#658#673#0" />
-            <element signature="e#736#748#0" />
-            <element signature="e#787#913#0" />
-            <element signature="e#956#1150#0" />
-            <element signature="e#1065#1150#0" />
-            <element signature="e#1199#1522#0" />
-            <element signature="e#1297#1439#0" />
-            <element signature="e#1565#2018#0" />
-            <element signature="e#2063#3960#0" />
-            <element signature="e#4013#4172#0" />
-            <element signature="e#4216#4372#0" />
-            <element signature="e#4422#4743#0" />
-            <element signature="e#4775#4823#0" />
-            <element signature="e#4859#5039#0" />
-            <element signature="e#5172#5243#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/remove_duplicated_db_item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/update_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="e#22#33#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="744">
           <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
           <folding>
             <element signature="e#74#214#0" />
@@ -401,20 +467,108 @@
             <element signature="e#938#1027#0" />
             <element signature="e#1063#1152#0" />
             <element signature="e#1195#1328#0" />
-            <element signature="e#1420#2113#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/filter_stock.py">
+    <entry file="file://$PROJECT_DIR$/WebController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        <state relative-caret-position="465">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#166#443#0" />
-            <element signature="e#498#733#0" />
-            <element signature="e#854#1139#0" />
+            <element signature="e#75#377#0" />
+            <element signature="e#114#351#0" />
+            <element signature="e#407#561#0" />
+            <element signature="e#596#627#0" />
+            <element signature="e#658#673#0" />
+            <element signature="e#736#748#0" />
+            <element signature="e#787#913#0" />
+            <element signature="e#956#1150#0" />
+            <element signature="e#1065#1150#0" />
+            <element signature="e#1199#1522#0" />
+            <element signature="e#1297#1439#0" />
+            <element signature="e#1565#2018#0" />
+            <element signature="e#2063#4011#0" />
+            <element signature="e#2311#4011#0" />
+            <element signature="e#3110#4011#0" />
+            <element signature="e#3251#3861#0" />
+            <element signature="e#4064#4223#0" />
+            <element signature="e#4267#4423#0" />
+            <element signature="e#4473#4794#0" />
+            <element signature="e#4826#4874#0" />
+            <element signature="e#4910#5090#0" />
+            <element signature="e#5132#5787#0" />
+            <element signature="e#5223#5294#0" />
+            <element signature="e#5471#5787#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverTheCounterWebController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="e#105#342#0" />
+            <element signature="e#501#569#0" />
+            <element signature="e#690#721#0" />
+            <element signature="e#752#767#0" />
+            <element signature="e#830#842#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remove_duplicated_db_item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/update_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#22#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="e#22#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StockExchangeWebController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#127#364#0" />
+            <element signature="e#420#574#0" />
+            <element signature="e#609#640#0" />
+            <element signature="e#671#686#0" />
+            <element signature="e#749#761#0" />
+            <element signature="e#800#926#0" />
+            <element signature="e#969#1163#0" />
+            <element signature="e#1078#1163#0" />
+            <element signature="e#1212#1535#0" />
+            <element signature="e#1578#2031#0" />
+            <element signature="e#2080#3991#0" />
+            <element signature="e#4077#4236#0" />
+            <element signature="e#4280#4436#0" />
+            <element signature="e#4486#4807#0" />
+            <element signature="e#4839#4887#0" />
+            <element signature="e#4923#5103#0" />
+            <element signature="e#5145#5800#0" />
+            <element signature="e#5236#5307#0" />
+            <element signature="e#5484#5800#0" />
           </folding>
         </state>
       </provider>

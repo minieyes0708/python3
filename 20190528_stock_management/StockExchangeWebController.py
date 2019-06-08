@@ -7,7 +7,7 @@ class StockExchangeWebController:
         "{date_info}", "{stock_id}", "{stock_name}", {deal_stock_count}, 
         "{open_price}", "{highest_price}", "{lowest_price}", "{close_price}", "{rise_fall}")
         '''
-        self.records = []
+        self.records = dict()
 
     def open(self):
         from selenium import webdriver
@@ -87,8 +87,7 @@ class StockExchangeWebController:
                     'rise_fall': tds[rise_fall_col1].text + tds[rise_fall_col2].text
                 }
                 record = self.sql_cmd.format(**values)
-                if record not in self.records:
-                    self.records.append(record)
+                self.records[values['stock_id']] = record
 
     def select_type_by_index(self, index):
         from selenium.webdriver.support.ui import Select

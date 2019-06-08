@@ -86,6 +86,11 @@ class StockExchangeWebController:
                     'close_price': tds[close_price_col].text,
                     'rise_fall': tds[rise_fall_col1].text + tds[rise_fall_col2].text
                 }
+                try:
+                    float(values['open_price'])
+                    float(values['rise_fall'])
+                except ValueError:
+                    continue
                 record = self.sql_cmd.format(**values)
                 self.records[values['stock_id']] = record
 

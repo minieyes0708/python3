@@ -40,5 +40,10 @@ class OverTheCounterWebController:
                 'close_price': stock_info[2],
                 'rise_fall': stock_info[3]
             }
+            try:
+                float(values['open_price'])
+                float(values['rise_fall'])
+            except ValueError:
+                continue
             record = self.sql_cmd.format(**values)
             self.records[values['stock_id']] = record

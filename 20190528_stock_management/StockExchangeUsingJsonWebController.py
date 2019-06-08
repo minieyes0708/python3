@@ -41,5 +41,10 @@ class StockExchangeUsingJsonWebController:
                     'close_price': stock_info[8],
                     'rise_fall': re.sub('<.*?>', '', stock_info[9])
                 }
+                try:
+                    float(values['open_price'])
+                    float(values['rise_fall'])
+                except ValueError:
+                    continue
                 record = self.sql_cmd.format(**values)
                 self.records[values['stock_id']] = record

@@ -10,8 +10,6 @@ def rise_percent(stock_info, percent, days):
     rise_fall = [stock_info[-(day + 1)]['rise_fall'].replace('X','') for day in range(days)]
     open_price = [stock_info[-(day + 1)]['open_price'].replace(',','') for day in range(days)]
 
-    if '--' in open_price: return False
-
     rise_fall_percentage = [float(rf) * 100 / float(op) for (rf, op) in zip(rise_fall, open_price)]
     if all(map(lambda x: x > percent, rise_fall_percentage)):
         return True

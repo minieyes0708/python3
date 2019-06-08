@@ -1,23 +1,39 @@
 # -*- coding=utf8 -*-
-import time
-from StockExchangeWebController import StockExchangeWebController
+from StockExchangeUsingJsonWebController import StockExchangeUsingJsonWebController
+from OverTheCounterWebController import OverTheCounterWebController
 from DBController import DBController
 from datetime import timedelta, date
 
 
-with StockExchangeWebController() as web:
+db_last_date = date.today()
+with DBController() as db:
+    db_last_date = db.last_date()
+
+
+with StockExchangeUsingJsonWebController() as web:
     with DBController() as db:
-        cur_date = db.last_date() + timedelta(1)
+        cur_date = db_last_date() + timedelta(1)
         last_date = date.today()
         while cur_date <= last_date:
-            start_time = time.clock()
-            print('processing date = ', str(cur_date))
-            web.select_date(cur_date)
-            web.update_all_types()
+            print('stock exchange processing date = ', str(cur_date))
+            web.update_date(cur_date)
             print('All Record Count = ', len(web.records))
             for cmd in web.records.values():
                 db.execute(cmd)
             db.commit()
             web.records.clear()
             cur_date = cur_date + timedelta(1)
-            print('total time took {0:.2f}s'.format(time.clock() - start_time))
+
+with OverTheCounterWebController() as web:
+    with DBController() as db:
+        cur_date = db_last_date() + timedelta(1)
+        last_date = date.today()
+        while cur_date <= last_date:
+            print('over the counter processing date = ', str(cur_date))
+            web.update_date(cur_date)
+            print('All Record Count = ', len(web.records))
+            for cmd in web.records.values():
+                db.execute(cmd)
+            db.commit()
+            web.records.clear()
+            cur_date = cur_date + timedelta(1)

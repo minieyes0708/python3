@@ -3,7 +3,7 @@ class OverTheCounterWebController:
     def __init__(self):
         self.web = None
         self.sql_cmd = '''
-        INSERT INTO `everyday_close_info` VALUES(NULL,
+        INSERT IGNORE INTO `everyday_close_info` VALUES(NULL,
         "{date_info}", "{stock_id}", "{stock_name}", {deal_stock_count}, 
         "{open_price}", "{highest_price}", "{lowest_price}", "{close_price}", "{rise_fall}")
         '''

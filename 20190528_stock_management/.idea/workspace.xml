@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcc9a948-e892-4735-89e2-b076297d5e1a" name="Default Changelist" comment="Remove WebControler name to StockExchangeWebController">
-      <change afterPath="$PROJECT_DIR$/OverTheCounterWebController.py" afterDir="false" />
+    <list default="true" id="fcc9a948-e892-4735-89e2-b076297d5e1a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/StockExchangeUsingJsonWebController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OverTheCounterWebController.py" beforeDir="false" afterPath="$PROJECT_DIR$/OverTheCounterWebController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StockExchangeWebController.py" beforeDir="false" afterPath="$PROJECT_DIR$/StockExchangeWebController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/update_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/update_database.py" afterDir="false" />
     </list>
@@ -16,68 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/StockExchangeWebController.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="e#127#364#0" />
-                <element signature="e#420#574#0" />
-                <element signature="e#609#640#0" />
-                <element signature="e#671#686#0" />
-                <element signature="e#749#761#0" />
-                <element signature="e#800#926#0" />
-                <element signature="e#969#1163#0" />
-                <element signature="e#1078#1163#0" />
-                <element signature="e#1212#1535#0" />
-                <element signature="e#1578#2031#0" />
-                <element signature="e#2080#3991#0" />
-                <element signature="e#4077#4236#0" />
-                <element signature="e#4280#4436#0" />
-                <element signature="e#4486#4807#0" />
-                <element signature="e#4839#4887#0" />
-                <element signature="e#4923#5103#0" />
-                <element signature="e#5145#5800#0" />
-                <element signature="e#5236#5307#0" />
-                <element signature="e#5484#5800#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OverTheCounterWebController.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-              <folding>
-                <element signature="e#105#342#0" />
-                <element signature="e#501#569#0" />
-                <element signature="e#690#721#0" />
-                <element signature="e#752#767#0" />
-                <element signature="e#830#842#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/update_database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#22#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="217">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#22#33#0" expanded="true" />
               </folding>
@@ -103,11 +46,12 @@
         <option value="$PROJECT_DIR$/WebController.py" />
         <option value="$PROJECT_DIR$/DBController.py" />
         <option value="$PROJECT_DIR$/filter_stock.py" />
+        <option value="$PROJECT_DIR$/remove_duplicated_db_item.py" />
         <option value="$PROJECT_DIR$/StockExchangeWebController.py" />
         <option value="$PROJECT_DIR$/OverTheCounterWebController.py" />
-        <option value="$PROJECT_DIR$/update_database.py" />
+        <option value="$PROJECT_DIR$/StockExchangeUsingJsonWebController.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/remove_duplicated_db_item.py" />
+        <option value="$PROJECT_DIR$/update_database.py" />
       </list>
     </option>
   </component>
@@ -183,7 +127,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.update_database">
     <configuration name="filter_stock" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="20190528_stock_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -270,10 +214,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.update_database" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.remove_duplicated_db_item" />
         <item itemvalue="Python.filter_stock" />
-        <item itemvalue="Python.update_database" />
       </list>
     </recent_temporary>
   </component>
@@ -351,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559976138004</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added OverTheCounterWebController&#10;&#10;- records use dict">
+      <created>1559983069213</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1559983069213</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -437,7 +388,8 @@
     <MESSAGE value="update_database should start from last_date + 1" />
     <MESSAGE value="add highest_price filter&#10;&#10;- when comparing None in if statement, simply use not&#10;- rise_percent can now input percentage&#10;- max_deal_count check if rise_fall is negative&#10;  Or Should I?&#10;- stock_info get from last 60 days&#10;- print executation time" />
     <MESSAGE value="Remove WebControler name to StockExchangeWebController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove WebControler name to StockExchangeWebController" />
+    <MESSAGE value="added OverTheCounterWebController&#10;&#10;- records use dict" />
+    <option name="LAST_COMMIT_MESSAGE" value="added OverTheCounterWebController&#10;&#10;- records use dict" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/filter_stock.py">
@@ -504,71 +456,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OverTheCounterWebController.py">
+    <entry file="file://$PROJECT_DIR$/StockExchangeWebController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+        <state relative-caret-position="124">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
           <folding>
-            <element signature="e#105#342#0" />
-            <element signature="e#501#569#0" />
-            <element signature="e#690#721#0" />
-            <element signature="e#752#767#0" />
-            <element signature="e#830#842#0" />
+            <element signature="e#127#371#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/remove_duplicated_db_item.py">
+    <entry file="file://$PROJECT_DIR$/OverTheCounterWebController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/update_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="62">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding>
-            <element signature="e#22#33#0" expanded="true" />
+            <element signature="e#89#539#0" />
+            <element signature="e#128#372#0" />
+            <element signature="e#867#1632#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        <state relative-caret-position="62">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
-            <element signature="e#22#33#0" expanded="true" />
+            <element signature="e#713#796#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StockExchangeWebController.py">
+    <entry file="file://$PROJECT_DIR$/remove_duplicated_db_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="93">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StockExchangeUsingJsonWebController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#127#364#0" />
-            <element signature="e#420#574#0" />
-            <element signature="e#609#640#0" />
-            <element signature="e#671#686#0" />
-            <element signature="e#749#761#0" />
-            <element signature="e#800#926#0" />
-            <element signature="e#969#1163#0" />
-            <element signature="e#1078#1163#0" />
-            <element signature="e#1212#1535#0" />
-            <element signature="e#1578#2031#0" />
-            <element signature="e#2080#3991#0" />
-            <element signature="e#4077#4236#0" />
-            <element signature="e#4280#4436#0" />
-            <element signature="e#4486#4807#0" />
-            <element signature="e#4839#4887#0" />
-            <element signature="e#4923#5103#0" />
-            <element signature="e#5145#5800#0" />
-            <element signature="e#5236#5307#0" />
-            <element signature="e#5484#5800#0" />
+            <element signature="e#89#532#0" />
+            <element signature="e#128#365#0" />
+            <element signature="e#562#630#0" />
+            <element signature="e#665#696#0" />
+            <element signature="e#727#742#0" />
+            <element signature="e#805#817#0" />
+            <element signature="e#860#1625#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/update_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#22#33#0" expanded="true" />
           </folding>
         </state>
       </provider>

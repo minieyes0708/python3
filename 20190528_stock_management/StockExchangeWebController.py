@@ -1,5 +1,5 @@
 # -*- coding=utf8 -*-
-class WebController:
+class StockExchangeWebController:
     def __init__(self):
         self.web = None
         self.sql_cmd = '''

@@ -12,7 +12,7 @@ with DBController() as db:
 
 with StockExchangeUsingJsonWebController() as web:
     with DBController() as db:
-        cur_date = db_last_date() + timedelta(1)
+        cur_date = db_last_date + timedelta(1)
         last_date = date.today()
         while cur_date <= last_date:
             print('stock exchange processing date = ', str(cur_date))
@@ -26,7 +26,7 @@ with StockExchangeUsingJsonWebController() as web:
 
 with OverTheCounterWebController() as web:
     with DBController() as db:
-        cur_date = db_last_date() + timedelta(1)
+        cur_date = db_last_date + timedelta(1)
         last_date = date.today()
         while cur_date <= last_date:
             print('over the counter processing date = ', str(cur_date))

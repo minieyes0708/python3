@@ -45,5 +45,7 @@ class OverTheCounterWebController:
                 float(values['rise_fall'])
             except ValueError:
                 continue
+            if len(values['stock_id']) == 6 and values['stock_id'][0] == '7':
+                continue
             record = self.sql_cmd.format(**values)
             self.records[values['stock_id']] = record

@@ -36,7 +36,8 @@ class DBController:
         return self.cursor.fetchall()
 
     def last_date(self):
-        return self.fetchone('SELECT MAX(`date_info`) FROM ' + self.tbl_name)['MAX(`date_info`)']
+        from datetime import date, timedelta
+        return self.fetchone('SELECT MAX(`date_info`) FROM ' + self.tbl_name)['MAX(`date_info`)'] or date.today() - timedelta(30 * 3)
 
     def first_date(self):
         return self.fetchone('SELECT MIN(`date_info`) FROM ' + self.tbl_name)['MIN(`date_info`)']

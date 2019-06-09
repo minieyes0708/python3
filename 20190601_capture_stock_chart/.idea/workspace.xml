@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62e524d3-cd3e-4686-8ec5-a61d5652e174" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../20190528_stock_management/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190528_stock_management/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="62e524d3-cd3e-4686-8ec5-a61d5652e174" name="Default Changelist" comment="remove some stock from db&#10;&#10;- last_date return 3 months ago if db return None&#10;- ignore all stock_id len == 6 and begins from '7'&#10;- db_last_date is not callable">
+      <change beforePath="$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture_stocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/capture_stocks.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,31 +14,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../20190528_stock_management/filter_stock.py">
+        <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1178">
-              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stocks.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1612">
-              <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/capture_stocks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="294">
+              <caret line="41" column="83" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -55,8 +33,13 @@
         <option value="$PROJECT_DIR$/capture_reserved.py" />
         <option value="$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" />
         <option value="$PROJECT_DIR$/reserved.txt" />
-        <option value="$PROJECT_DIR$/stocks.txt" />
         <option value="$PROJECT_DIR$/capture_stocks.py" />
+        <option value="$PROJECT_DIR$/../20190528_stock_management/OverTheCounterWebController.py" />
+        <option value="$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py" />
+        <option value="$PROJECT_DIR$/../20190528_stock_management/update_database.py" />
+        <option value="$PROJECT_DIR$/../20190528_stock_management/DBController.py" />
+        <option value="$PROJECT_DIR$/stocks.txt" />
+        <option value="$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py" />
       </list>
     </option>
   </component>
@@ -71,6 +54,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1032" />
   </component>
@@ -86,6 +70,10 @@
             <path>
               <item name="20190601_capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Program Files\Python36\minieyes\20190528_stock_management" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="20190601_capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\20190601_capture_stock_chart" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -180,7 +168,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.capture_stocks">
+  <component name="RunManager" selected="Python.filter_stock">
     <configuration name="capture_stocks" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="20190601_capture_stock_chart" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -267,9 +255,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.capture_stocks" />
         <item itemvalue="Python.filter_stock" />
         <item itemvalue="Python.update_database" />
+        <item itemvalue="Python.capture_stocks" />
         <item itemvalue="Python.remove_duplicated_db_item" />
       </list>
     </recent_temporary>
@@ -313,19 +301,33 @@
       <option name="project" value="LOCAL" />
       <updated>1559656326409</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="stock_id don't need to convert to int">
+      <created>1560036064059</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1560036064059</updated>
+    </task>
+    <task id="LOCAL-00006" summary="remove some stock from db&#10;&#10;- last_date return 3 months ago if db return None&#10;- ignore all stock_id len == 6 and begins from '7'&#10;- db_last_date is not callable">
+      <created>1560046266480</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560046266480</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887133" visible="true" weight="0.25375536" />
-      <window_info id="Structure" order="1" sideWeight="0.5011287" side_tool="true" visible="true" weight="0.25375536" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983165" visible="true" weight="0.25375536" />
+      <window_info id="Structure" order="1" sideWeight="0.5016835" side_tool="true" visible="true" weight="0.25375536" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295711" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -333,7 +335,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295711" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3295711" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -344,7 +346,9 @@
     <MESSAGE value="some minor fine tune, add 羊穿預約" />
     <MESSAGE value="stock_ids use list rather then Set (no indexer)" />
     <MESSAGE value="rise_percent should check real percentage&#10;&#10;- rise_fall is price amount rather then percentage&#10;- ignore if open_price == '--'" />
-    <option name="LAST_COMMIT_MESSAGE" value="rise_percent should check real percentage&#10;&#10;- rise_fall is price amount rather then percentage&#10;- ignore if open_price == '--'" />
+    <MESSAGE value="stock_id don't need to convert to int" />
+    <MESSAGE value="remove some stock from db&#10;&#10;- last_date return 3 months ago if db return None&#10;- ignore all stock_id len == 6 and begins from '7'&#10;- db_last_date is not callable" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove some stock from db&#10;&#10;- last_date return 3 months ago if db return None&#10;- ignore all stock_id len == 6 and begins from '7'&#10;- db_last_date is not callable" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/WebController.py" />
@@ -357,9 +361,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/update_database.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/remove_duplicated_db_item.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -382,20 +383,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/OverTheCounterWebController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/update_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/DBController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stocks.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1612">
-          <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+        <state relative-caret-position="495">
+          <caret line="146" column="3" selection-start-line="146" selection-start-column="3" selection-end-line="146" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/capture_stocks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="496">
           <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="41" column="83" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
         </state>
       </provider>
     </entry>

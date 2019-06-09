@@ -39,7 +39,7 @@ class StockExchangeUsingJsonWebController:
                     'highest_price': stock_info[6],
                     'lowest_price': stock_info[7],
                     'close_price': stock_info[8],
-                    'rise_fall': re.sub('<.*?>', '', stock_info[9])
+                    'rise_fall': re.sub('<.*?>', '', stock_info[9]) + stock_info[10]
                 }
                 try:
                     float(values['open_price'])

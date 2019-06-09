@@ -55,7 +55,7 @@ class DBController:
         return self.fetchall('''
         SELECT `date_info`, `stock_id`, `stock_name`, `deal_stock_count`, `open_price`, `highest_price`, `lowest_price`, `close_price`, `rise_fall` FROM {tbl_name}
         WHERE `date_info` >= "{start_date}" AND `date_info` <= "{end_date}"
-        ORDER BY `date_info`
+        ORDER BY `stock_id`, `date_info`
         '''.format(**{
             'tbl_name': self.tbl_name,
             'start_date': start_date,

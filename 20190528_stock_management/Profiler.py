@@ -13,10 +13,10 @@ class Profiler:
         import time
         self.start_time = time.clock()
 
-    def stamp(self):
+    def stamp(self, weighting = 1):
         import time
-        self.count += 1
-        self.total += (time.clock() - self.start_time)
+        self.count += weighting
+        self.total += (time.clock() - self.start_time) * weighting
 
     def remaining_time(self, left_count):
         import math

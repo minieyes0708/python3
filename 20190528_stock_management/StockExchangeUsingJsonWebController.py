@@ -49,7 +49,7 @@ class StockExchangeUsingJsonWebController:
                 if (
                         'X' in values['stock_id'] or
                         'P' in values['stock_id'] or
-                        re.match(r'.*[購展]\d\d', values['stock_id'])
+                        re.match(r'.*[購展]\d\d', values['stock_name'])
                 ):
                     continue
                 record = self.sql_cmd.format(**values)

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62e524d3-cd3e-4686-8ec5-a61d5652e174" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../20190528_stock_management/Profiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190528_stock_management/OverTheCounterWebController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190528_stock_management/OverTheCounterWebController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -17,11 +19,38 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../20190528_stock_management/filter_stock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="-233">
+              <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../20190528_stock_management/OverTheCounterWebController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -44,14 +73,14 @@
         <option value="$PROJECT_DIR$/capture_reserved.py" />
         <option value="$PROJECT_DIR$/reserved.txt" />
         <option value="$PROJECT_DIR$/capture_stocks.py" />
-        <option value="$PROJECT_DIR$/../20190528_stock_management/OverTheCounterWebController.py" />
-        <option value="$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py" />
         <option value="$PROJECT_DIR$/../20190528_stock_management/update_database.py" />
         <option value="$PROJECT_DIR$/stocks.txt" />
-        <option value="$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py" />
-        <option value="$PROJECT_DIR$/../20190528_stock_management/DBController.py" />
         <option value="$PROJECT_DIR$/../20190528_stock_management/Profiler.py" />
+        <option value="$PROJECT_DIR$/../20190528_stock_management/DBController.py" />
         <option value="$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" />
+        <option value="$PROJECT_DIR$/../20190528_stock_management/OverTheCounterWebController.py" />
+        <option value="$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py" />
+        <option value="$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py" />
       </list>
     </option>
   </component>
@@ -66,21 +95,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="20190601_capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Program Files\Python36\minieyes\20190528_stock_management" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="20190601_capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Program Files\Python36\minieyes\20190601_capture_stock_chart" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,11 +166,26 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="20190601_capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\20190528_stock_management" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="20190601_capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\20190601_capture_stock_chart" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -324,17 +353,29 @@
       <option name="project" value="LOCAL" />
       <updated>1560053335584</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add Profiler">
+      <created>1560054992572</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1560054992572</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fetch All Stocks First to Speed Up&#10;&#10;- DBController add fetch_all_stocks_in_time&#10;- use list generator later to fetch stock_info">
+      <created>1560059894328</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560059894328</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983165" visible="true" weight="0.25375536" />
-      <window_info id="Structure" order="1" sideWeight="0.5016835" side_tool="true" visible="true" weight="0.25375536" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496633" visible="true" weight="0.25369978" />
+      <window_info id="Structure" order="1" sideWeight="0.503367" side_tool="true" visible="true" weight="0.25369978" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295711" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
@@ -346,6 +387,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.41760722" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -359,7 +401,9 @@
     <MESSAGE value="stock_id don't need to convert to int" />
     <MESSAGE value="remove some stock from db&#10;&#10;- last_date return 3 months ago if db return None&#10;- ignore all stock_id len == 6 and begins from '7'&#10;- db_last_date is not callable" />
     <MESSAGE value="rise_fall should also append stock_info[10]" />
-    <option name="LAST_COMMIT_MESSAGE" value="rise_fall should also append stock_info[10]" />
+    <MESSAGE value="add Profiler" />
+    <MESSAGE value="Fetch All Stocks First to Speed Up&#10;&#10;- DBController add fetch_all_stocks_in_time&#10;- use list generator later to fetch stock_info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fetch All Stocks First to Speed Up&#10;&#10;- DBController add fetch_all_stocks_in_time&#10;- use list generator later to fetch stock_info" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/WebController.py" />
@@ -411,30 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/OverTheCounterWebController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/DBController.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/Profiler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -442,10 +462,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/DBController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/OverTheCounterWebController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/filter_stock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="-233">
+          <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>

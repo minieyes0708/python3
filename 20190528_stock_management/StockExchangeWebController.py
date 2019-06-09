@@ -54,6 +54,7 @@ class StockExchangeWebController:
         return date(year, month, day)
 
     def update_current_page(self):
+        import re
         self.select_show_all_records()
         date_info = self.get_selected_date()
         rpt_tbl = self.web.find_element_by_id('report-table1')
@@ -91,7 +92,11 @@ class StockExchangeWebController:
                     float(values['rise_fall'])
                 except ValueError:
                     continue
-                if len(values['stock_id']) == 6 and values['stock_id'][0] == '7':
+                if (
+                        'X' in values['stock_id'] or
+                        'P' in values['stock_id'] or
+                        re.match(r'.*[購展]\d\d', values['stock_id'])
+                ):
                     continue
                 record = self.sql_cmd.format(**values)
                 self.records[values['stock_id']] = record

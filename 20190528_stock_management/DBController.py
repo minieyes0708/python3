@@ -46,6 +46,22 @@ class DBController:
         cmd = 'SELECT `stock_id` FROM ' + self.tbl_name + ' GROUP BY `stock_id`'
         return [id['stock_id'] for id in self.fetchall(cmd)]
 
+    def fetch_all_stocks_in_time(self, start_date = None, end_date = None):
+        from datetime import date
+        if not start_date:
+            start_date = self.first_date()
+        if not end_date:
+            end_date = date.today()
+        return self.fetchall('''
+        SELECT `date_info`, `stock_id`, `stock_name`, `deal_stock_count`, `open_price`, `highest_price`, `lowest_price`, `close_price`, `rise_fall` FROM {tbl_name}
+        WHERE `date_info` >= "{start_date}" AND `date_info` <= "{end_date}"
+        ORDER BY `date_info`
+        '''.format(**{
+            'tbl_name': self.tbl_name,
+            'start_date': start_date,
+            'end_date': end_date,
+        }))
+
     def get_stock_info_by_id(self, stock_id, start_date = None, end_date = None):
         from datetime import date
         if not start_date:

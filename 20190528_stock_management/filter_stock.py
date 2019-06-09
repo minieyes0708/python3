@@ -44,11 +44,12 @@ profiler = Profiler()
 with DBController() as db:
     stock_ids = db.get_stock_id_list()
     total_stock_count = len(stock_ids)
+    all_stock_info = db.fetch_all_stocks_in_time(date.today() - timedelta(60), date.today())
     for stock_index in range(total_stock_count):
         profiler.start()
         print('{0} / {1}'.format(stock_index, total_stock_count))
         stock_id = stock_ids[stock_index]
-        stock_info = db.get_stock_info_by_id(stock_id, date.today() - timedelta(60), date.today())
+        stock_info = [info for info in all_stock_info if info['stock_id'] == stock_id]
         success = True
         for filter in filters:
             if not filter(stock_info):

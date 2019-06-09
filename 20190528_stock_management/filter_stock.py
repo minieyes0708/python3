@@ -1,5 +1,5 @@
-import time
 from functools import partial
+from Profiler import Profiler
 from datetime import date, timedelta
 from DBController import DBController
 
@@ -40,11 +40,12 @@ filters = (
 )
 
 passed_stocks = []
-start_time = time.clock()
+profiler = Profiler()
 with DBController() as db:
     stock_ids = db.get_stock_id_list()
     total_stock_count = len(stock_ids)
     for stock_index in range(total_stock_count):
+        profiler.start()
         print('{0} / {1}'.format(stock_index, total_stock_count))
         stock_id = stock_ids[stock_index]
         stock_info = db.get_stock_info_by_id(stock_id, date.today() - timedelta(60), date.today())
@@ -55,8 +56,9 @@ with DBController() as db:
                 break
         if success:
             passed_stocks.append(stock_id)
+        profiler.stamp()
+        print('remaining time = {0}:{1}:{2}'.format(*profiler.remaining_time(total_stock_count - stock_index - 1)))
 
 for stock in passed_stocks:
     print(stock)
 print('total passed stock count = ', len(passed_stocks))
-print('total time took = {0}s'.format(time.clock() - start_time))

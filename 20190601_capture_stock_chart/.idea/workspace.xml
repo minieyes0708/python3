@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62e524d3-cd3e-4686-8ec5-a61d5652e174" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/auto_run_all.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter_reserved.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../book_tickets/.idea/book_tickets.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../book_tickets/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../book_tickets/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../book_tickets/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../book_tickets/天ㄟ露營車體驗住宿.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -15,19 +19,33 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/auto_run_all.py">
+        <entry file="file://$PROJECT_DIR$/filter_reserved.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="403">
+              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stocks.txt">
+        <entry file="file://$PROJECT_DIR$/../20190528_stock_management/filter_stock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state>
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/capture_reserved.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,7 +66,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/capture_reserved.py" />
-        <option value="$PROJECT_DIR$/reserved.txt" />
         <option value="$PROJECT_DIR$/capture_stocks.py" />
         <option value="$PROJECT_DIR$/../20190528_stock_management/update_database.py" />
         <option value="$PROJECT_DIR$/../20190528_stock_management/DBController.py" />
@@ -59,6 +76,8 @@
         <option value="$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" />
         <option value="$PROJECT_DIR$/stocks.txt" />
         <option value="$PROJECT_DIR$/auto_run_all.py" />
+        <option value="$PROJECT_DIR$/reserved.txt" />
+        <option value="$PROJECT_DIR$/filter_reserved.py" />
       </list>
     </option>
   </component>
@@ -73,6 +92,21 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="20190601_capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\20190528_stock_management" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="20190601_capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\20190601_capture_stock_chart" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,21 +178,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="20190601_capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Program Files\Python36\minieyes\20190528_stock_management" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="20190601_capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Program Files\Python36\minieyes\20190601_capture_stock_chart" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -177,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.auto_run_all">
+  <component name="RunManager" selected="Python.filter_reserved">
     <configuration name="auto_run_all" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="20190528_stock_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,6 +239,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="filter_reserved" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="20190528_stock_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/filter_reserved.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="filter_stock" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="20190528_stock_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -233,27 +273,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="remove_duplicated_db_item" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="20190528_stock_management" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../20190528_stock_management" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../20190528_stock_management/remove_duplicated_db_item.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -285,11 +304,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.filter_reserved" />
         <item itemvalue="Python.auto_run_all" />
         <item itemvalue="Python.filter_stock" />
         <item itemvalue="Python.capture_stocks" />
         <item itemvalue="Python.update_database" />
-        <item itemvalue="Python.remove_duplicated_db_item" />
       </list>
     </recent_temporary>
   </component>
@@ -388,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560075687154</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add auto_run_all.py">
+      <created>1560080564989</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560080564989</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -428,27 +454,11 @@
     <MESSAGE value="remove stock_id with 'P' or 'X' or r'.*[購展]\d\d'" />
     <MESSAGE value="don't gen list for each stock_info, simply set index to speed up&#10;&#10;- fetch_all_stock_info also order by stock_id&#10;- all filter input all_stock_info, start_index, end_index&#10;- add inner loop_all_stocks funciton&#10;- Profiler.stamp add weighting param" />
     <MESSAGE value="ignore [購展]\d\d should set on stock_name property" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignore [購展]\d\d should set on stock_name property" />
+    <MESSAGE value="add auto_run_all.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="add auto_run_all.py" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/WebController.py" />
-    <entry file="file://$PROJECT_DIR$/capture_reserved.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reserved.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/remove_duplicated_db_item.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -498,16 +508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/filter_stock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/capture_stocks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -520,15 +520,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stocks.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reserved.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auto_run_all.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/capture_reserved.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="93">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/filter_stock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filter_reserved.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
         </state>
       </provider>
     </entry>

@@ -1,10 +1,9 @@
-import sys
+from minieyes.stock_management.update_database import *
+from minieyes.stock_management.filter_stock import *
+from minieyes.capture_stock_chart.capture_stocks import *
 
-sys.path.append(r'C:\Program Files\Python36\minieyes\20190528_stock_management')
-
-import update_database
-import filter_stock
+update_database()
+passed_stocks = filter_stock()
 with open('stocks.txt', 'w') as file:
-    file.write('\n'.join(filter_stock.passed_stocks))
-
-import capture_stocks
+    file.write('\n'.join(passed_stocks))
+capture_stocks()

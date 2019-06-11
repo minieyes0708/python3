@@ -13,7 +13,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auto_run_all.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="124">
               <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
@@ -146,21 +146,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Program Files\Python36\minieyes\capture_stock_chart" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Program Files\Python36\minieyes\stock_management" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,8 +389,8 @@
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48989898" visible="true" weight="0.25264272" />
-      <window_info id="Structure" order="1" sideWeight="0.510101" side_tool="true" visible="true" weight="0.25264272" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48821548" visible="true" weight="0.25264272" />
+      <window_info id="Structure" order="1" sideWeight="0.5117845" side_tool="true" visible="true" weight="0.25264272" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295711" />
@@ -499,7 +485,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auto_run_all.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="124">
           <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />

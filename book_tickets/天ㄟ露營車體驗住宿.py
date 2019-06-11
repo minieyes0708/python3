@@ -89,6 +89,7 @@ class MainTabControl:
         TabPage3(window)
         TabPage4(window)
         TabPage5(window)
+        TabPage6(window)
 
 
 class TabPage:
@@ -257,7 +258,18 @@ class TabPage5(TabPage):
         web.find_element_by_id('faddress').send_keys(self.window.txtBookAddress.get())
         web.find_element_by_id('fnote').clear()
         web.find_element_by_id('fnote').send_keys(self.window.txtBookMessage.get())
-        # self.click_next_step()
+        self.click_next_step()
+
+
+class TabPage6(TabPage):
+    def __init__(self, window):
+        window.tabPage6 = self.initialize(window, '訂單資訊', self.final_book_info)
+        self.page.columnconfigure(0, weight=1)
+
+    def final_book_info(self):
+        global web
+        web.find_element_by_id('btnNext').click()
+
 
 if __name__ == '__main__':
     Main()

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b094a56-bcd6-427d-b7bd-0cbee87e6486" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../20190601_capture_stock_chart/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20190601_capture_stock_chart/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,23 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/high_speed_rail_train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1767">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/天ㄟ露營車體驗住宿.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="145" column="61" lean-forward="true" selection-start-line="145" selection-start-column="61" selection-end-line="145" selection-end-column="61" />
+            <state relative-caret-position="462">
+              <caret line="270" column="8" selection-start-line="270" selection-start-column="8" selection-end-line="270" selection-end-column="8" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -66,7 +54,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -78,6 +65,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -146,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560257829493</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="新增最後訂單資訊Page">
+      <created>1560261037608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560261037608</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -162,8 +157,8 @@
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496633" visible="true" weight="0.15961945" />
-      <window_info id="Structure" order="1" sideWeight="0.503367" side_tool="true" visible="true" weight="0.15961945" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49435666" visible="true" weight="0.15961945" />
+      <window_info id="Structure" order="1" sideWeight="0.50564337" side_tool="true" visible="true" weight="0.15961945" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -172,7 +167,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295711" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3295711" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295711" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3295711" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.29232505" />
@@ -183,7 +178,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增天ㄟ露營車體驗住宿" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增天ㄟ露營車體驗住宿" />
+    <MESSAGE value="新增最後訂單資訊Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增最後訂單資訊Page" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-1120166012/builtins.py">
@@ -212,8 +208,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/天ㄟ露營車體驗住宿.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="145" column="61" lean-forward="true" selection-start-line="145" selection-start-column="61" selection-end-line="145" selection-end-column="61" />
+        <state relative-caret-position="462">
+          <caret line="270" column="8" selection-start-line="270" selection-start-column="8" selection-end-line="270" selection-end-column="8" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

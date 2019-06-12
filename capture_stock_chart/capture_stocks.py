@@ -1,4 +1,4 @@
-# -*- encoding=utf8 -*-
+# -*- coding=utf8 -*-
 def capture_stocks():
     import time
     from selenium import webdriver

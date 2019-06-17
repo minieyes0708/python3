@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62e524d3-cd3e-4686-8ec5-a61d5652e174" name="Default Changelist" comment="" />
+    <list default="true" id="62e524d3-cd3e-4686-8ec5-a61d5652e174" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capture_stocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/capture_stocks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock_management/Profiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stock_management/Profiler.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,24 +13,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auto_run_all.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#55#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../stock_management/filter_stock.py">
+        <entry file="file://$PROJECT_DIR$/../stock_management/Profiler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
+            <state relative-caret-position="961">
+              <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+              <folding>
+                <element signature="e#74#86#0" />
+                <element signature="e#191#272#0" />
+                <element signature="e#244#294#0" />
+                <element signature="e#340#450#0" />
+                <element signature="e#502#857#0" />
+                <element signature="e#963#989#0" />
+                <element signature="e#1051#1074#0" />
+                <element signature="e#1127#1337#0" />
+                <element signature="e#1675#1892#0" />
+                <element signature="e#1885#2266#0" />
+                <element signature="e#2354#2606#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,12 +60,13 @@
         <option value="$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py" />
         <option value="$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" />
         <option value="$PROJECT_DIR$/filter_reserved.py" />
-        <option value="$PROJECT_DIR$/reserved.txt" />
-        <option value="$PROJECT_DIR$/stocks.txt" />
         <option value="$PROJECT_DIR$/../stock_management/update_database.py" />
-        <option value="$PROJECT_DIR$/capture_stocks.py" />
         <option value="$PROJECT_DIR$/auto_run_all.py" />
         <option value="$PROJECT_DIR$/../stock_management/filter_stock.py" />
+        <option value="$PROJECT_DIR$/capture_stocks.py" />
+        <option value="$PROJECT_DIR$/reserved.txt" />
+        <option value="$PROJECT_DIR$/stocks.txt" />
+        <option value="$PROJECT_DIR$/../stock_management/Profiler.py" />
       </list>
     </option>
   </component>
@@ -146,7 +152,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\capture_stock_chart" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\stock_management" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,29 +186,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.capture_stocks">
-    <configuration name="capture_stocks" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="capture_stock_chart" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/capture_stocks.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="filter_reserved" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Unittests for Profiler.TestProfiler">
+    <configuration name="auto_run_all" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="20190528_stock_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -200,7 +199,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/filter_reserved.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/auto_run_all.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -209,54 +208,69 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="filter_stock" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests for Profiler.TestProfiler" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="20190528_stock_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../20190528_stock_management" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../stock_management" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Profiler.TestProfiler&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="update_database" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests for Profiler.TestProfiler.testReset" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="20190528_stock_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../20190528_stock_management" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../stock_management" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../20190528_stock_management/update_database.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Profiler.TestProfiler.testReset&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Profiler.TestProfiler.testStamp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="20190528_stock_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../stock_management" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Profiler.TestProfiler.testStamp&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in Profiler.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="20190528_stock_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../stock_management" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/../stock_management/Profiler.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.capture_stocks" />
-        <item itemvalue="Python.filter_reserved" />
-        <item itemvalue="Python.filter_stock" />
-        <item itemvalue="Python.update_database" />
+        <item itemvalue="Python tests.Unittests for Profiler.TestProfiler" />
+        <item itemvalue="Python tests.Unittests for Profiler.TestProfiler.testStamp" />
+        <item itemvalue="Python tests.Unittests for Profiler.TestProfiler.testReset" />
+        <item itemvalue="Python tests.Unittests in Profiler.py" />
+        <item itemvalue="Python.auto_run_all" />
       </list>
     </recent_temporary>
   </component>
@@ -383,23 +397,63 @@
       <option name="project" value="LOCAL" />
       <updated>1560258703398</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="mis-spell coding to encoding">
+      <created>1560343363757</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1560343363757</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_Profiler_TestProfiler_testReset - 2019.06.17 at 21h 25m 04s.xml">
+      <configuration name="Unittests for Profiler.TestProfiler.testReset" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Profiler_TestProfiler_testReset - 2019.06.17 at 21h 30m 56s.xml">
+      <configuration name="Unittests for Profiler.TestProfiler.testReset" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Profiler_TestProfiler_testReset - 2019.06.17 at 21h 32m 07s.xml">
+      <configuration name="Unittests for Profiler.TestProfiler.testReset" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Profiler_TestProfiler_testReset - 2019.06.17 at 21h 34m 34s.xml">
+      <configuration name="Unittests for Profiler.TestProfiler.testReset" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Profiler_TestProfiler_testReset - 2019.06.17 at 21h 37m 10s.xml">
+      <configuration name="Unittests for Profiler.TestProfiler.testReset" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Profiler_TestProfiler_testReset - 2019.06.17 at 21h 38m 36s.xml">
+      <configuration name="Unittests for Profiler.TestProfiler.testReset" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Profiler_TestProfiler_testReset - 2019.06.17 at 21h 39m 21s.xml">
+      <configuration name="Unittests for Profiler.TestProfiler.testReset" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Profiler_TestProfiler - 2019.06.17 at 21h 41m 16s.xml">
+      <configuration name="Unittests for Profiler.TestProfiler" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Profiler_TestProfiler_testStamp - 2019.06.17 at 21h 42m 26s.xml">
+      <configuration name="Unittests for Profiler.TestProfiler.testStamp" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Profiler_TestProfiler - 2019.06.17 at 21h 43m 55s.xml">
+      <configuration name="Unittests for Profiler.TestProfiler" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48821548" visible="true" weight="0.25264272" />
-      <window_info id="Structure" order="1" sideWeight="0.5117845" side_tool="true" visible="true" weight="0.25264272" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.479798" visible="true" weight="0.25264272" />
+      <window_info id="Structure" order="1" sideWeight="0.52020204" side_tool="true" visible="true" weight="0.25264272" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295711" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295711" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3295711" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295711" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.41760722" />
@@ -426,7 +480,8 @@
     <MESSAGE value="add filter_reserved to find out falling in the past 3 days" />
     <MESSAGE value="rename folder so can be imported directly" />
     <MESSAGE value="script make functions, check __name__ == __main__ to execute, or called from others import" />
-    <option name="LAST_COMMIT_MESSAGE" value="script make functions, check __name__ == __main__ to execute, or called from others import" />
+    <MESSAGE value="mis-spell coding to encoding" />
+    <option name="LAST_COMMIT_MESSAGE" value="mis-spell coding to encoding" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/WebController.py" />
@@ -437,18 +492,28 @@
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeUsingJsonWebController.py" />
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py" />
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/update_database.py" />
-    <entry file="file://$PROJECT_DIR$/stocks.txt">
+    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" />
+    <entry file="file://$PROJECT_DIR$/../stock_management/update_database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="155" column="3" selection-start-line="155" selection-start-column="3" selection-end-line="155" selection-end-column="3" />
+        <state relative-caret-position="219">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" />
-    <entry file="file://$PROJECT_DIR$/reserved.txt">
+    <entry file="file://$PROJECT_DIR$/../stock_management/filter_stock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="403">
+          <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto_run_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -469,34 +534,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stock_management/update_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/../stock_management/DBController.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/capture_stocks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="217">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auto_run_all.py">
+    <entry file="file://$PROJECT_DIR$/reserved.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        <state relative-caret-position="248">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stocks.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="120" column="3" selection-start-line="120" selection-start-column="3" selection-end-line="120" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stock_management/Profiler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="961">
+          <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
           <folding>
-            <element signature="e#0#55#0" expanded="true" />
+            <element signature="e#74#86#0" />
+            <element signature="e#191#272#0" />
+            <element signature="e#244#294#0" />
+            <element signature="e#340#450#0" />
+            <element signature="e#502#857#0" />
+            <element signature="e#963#989#0" />
+            <element signature="e#1051#1074#0" />
+            <element signature="e#1127#1337#0" />
+            <element signature="e#1675#1892#0" />
+            <element signature="e#1885#2266#0" />
+            <element signature="e#2354#2606#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stock_management/filter_stock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
         </state>
       </provider>
     </entry>

@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../stock_management/.idea/20190528_stock_management.iml" filepath="$PROJECT_DIR$/../stock_management/.idea/20190528_stock_management.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/capture_stock_chart.iml" filepath="$PROJECT_DIR$/.idea/capture_stock_chart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../eyny/.idea/eyny.iml" filepath="$PROJECT_DIR$/../eyny/.idea/eyny.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/tensorflow/.idea/tensorflow.iml" filepath="$USER_HOME$/Desktop/tensorflow/.idea/tensorflow.iml" />
     </modules>
   </component>
 </project>

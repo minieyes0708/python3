@@ -29,16 +29,22 @@ class StockExchangeUsingJsonWebController:
 
     def find_data_group(self):
         for key in self.result.keys():
-            if self.result[key][0][0] == "0050":
-                self.data_group = key
-                return
-        raise ValueError('Can not find data_group')
+            try:
+                if self.result[key][0][0] == "0050":
+                    self.data_group = key
+                    return True
+            except KeyError:
+                continue
+        return False
 
     def update_date(self, date):
         import json, re
+        self.web.implicitly_wait(180)
         self.web.get(self.url % (date.year, date.month, date.day))
         self.result = json.loads(self.web.find_element_by_tag_name('pre').text)
-        self.find_data_group()
+        if self.find_data_group() == False:
+            print('Cannot Find Data Group')
+            return
         for stock_info in self.result[self.data_group]:
             values = {
                 'date_info': date,

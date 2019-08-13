@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62e524d3-cd3e-4686-8ec5-a61d5652e174" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/capture_stock_chart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/capture_stock_chart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../eyny/eyny_update2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../eyny/eyny_update2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" afterDir="false" />
@@ -17,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="194">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -53,13 +55,19 @@
         <option value="$PROJECT_DIR$/../stock_management/Profiler.py" />
         <option value="$PROJECT_DIR$/stocks.txt" />
         <option value="$PROJECT_DIR$/capture_stocks.py" />
+        <option value="$USER_HOME$/Desktop/tensorflow/test.py" />
+        <option value="$USER_HOME$/Desktop/tensorflow/NumerRecognition/training.py" />
+        <option value="$USER_HOME$/Desktop/tensorflow/NumberRecognition/training.py" />
+        <option value="$USER_HOME$/Desktop/tensorflow/DeepLearningWithPython/Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence.py" />
+        <option value="$PROJECT_DIR$/../../Lib/site-packages/tensorflow/python/keras/datasets/imdb.py" />
         <option value="$PROJECT_DIR$/reserved.txt" />
         <option value="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="960" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="960" />
     <option name="height" value="1032" />
   </component>
@@ -140,21 +148,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Program Files\Python36\minieyes\capture_stock_chart" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Program Files\Python36\minieyes\stock_management" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,6 +169,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.auto_run_all">
+    <configuration name="Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tensorflow" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/tensorflow/DeepLearningWithPython" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/tensorflow/DeepLearningWithPython/Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="auto_run_all" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="20190528_stock_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -196,19 +211,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="capture_stocks" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="20190528_stock_management" />
+    <configuration name="eyny_todo_filter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="eyny" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../eyny" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/capture_stocks.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../eyny/eyny_todo_filter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -217,19 +232,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="filter_reserved" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="20190528_stock_management" />
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tensorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/tensorflow" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/filter_reserved.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/tensorflow/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -238,41 +253,62 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for Profiler.TestProfiler" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="20190528_stock_management" />
+    <configuration name="training" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tensorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../stock_management" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/tensorflow/NumberRecognition" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Profiler.TestProfiler&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/tensorflow/NumberRecognition/training.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for Profiler.TestProfiler.testStamp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="20190528_stock_management" />
+    <configuration name="training" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tensorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../stock_management" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/tensorflow/NumerRecognition" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Profiler.TestProfiler.testStamp&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/tensorflow/NumerRecognition/training.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.auto_run_all" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.training" />
+      <item itemvalue="Python.Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence" />
+      <item itemvalue="Python.eyny_todo_filter" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.auto_run_all" />
-        <item itemvalue="Python.filter_reserved" />
-        <item itemvalue="Python.capture_stocks" />
-        <item itemvalue="Python tests.Unittests for Profiler.TestProfiler" />
-        <item itemvalue="Python tests.Unittests for Profiler.TestProfiler.testStamp" />
+        <item itemvalue="Python.eyny_todo_filter" />
+        <item itemvalue="Python.Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence" />
+        <item itemvalue="Python.training" />
+        <item itemvalue="Python.training" />
       </list>
     </recent_temporary>
   </component>
@@ -448,24 +484,33 @@
       <configuration name="Unittests for Profiler.TestProfiler" configurationId="tests" />
     </history-entry>
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.43406594" visible="true" weight="0.25264272" />
-      <window_info id="Structure" order="1" sideWeight="0.56593406" side_tool="true" visible="true" weight="0.25264272" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.40219378" visible="true" weight="0.1987315" />
+      <window_info id="Structure" order="1" sideWeight="0.5978062" side_tool="true" visible="true" weight="0.1987315" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295711" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3837472" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38261852" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295711" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295711" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" auto_hide="true" x="7" y="28" width="1908" height="999" id="Python Console" order="10" weight="0.9571106" />
+      <window_info anchor="bottom" auto_hide="true" x="969" y="36" width="942" height="987" id="Python Console" order="10" type="WINDOWED" weight="0.34198645" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -564,6 +609,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/tensorflow/test.py" />
+    <entry file="file://$USER_HOME$/Desktop/tensorflow/NumerRecognition/training.py" />
+    <entry file="file://$USER_HOME$/Desktop/tensorflow/NumberRecognition/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/tensorflow/NumberRecognition2/training.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Lib/site-packages/tensorflow/python/keras/datasets/imdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eyny/eyny_todo_filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/tensorflow/DeepLearningWithPython/Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reserved.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -573,8 +656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="194">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>

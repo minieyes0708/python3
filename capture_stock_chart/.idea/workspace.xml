@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62e524d3-cd3e-4686-8ec5-a61d5652e174" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/capture_stock_chart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/capture_stock_chart.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eyny/eyny_update2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../eyny/eyny_update2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eyny/eyny_todo_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../eyny/eyny_todo_filter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,17 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,8 +47,9 @@
         <option value="$USER_HOME$/Desktop/tensorflow/NumberRecognition/training.py" />
         <option value="$USER_HOME$/Desktop/tensorflow/DeepLearningWithPython/Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence.py" />
         <option value="$PROJECT_DIR$/../../Lib/site-packages/tensorflow/python/keras/datasets/imdb.py" />
-        <option value="$PROJECT_DIR$/reserved.txt" />
         <option value="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" />
+        <option value="$PROJECT_DIR$/reserved.txt" />
+        <option value="$PROJECT_DIR$/../eyny/eyny_todo_filter.py" />
       </list>
     </option>
   </component>
@@ -77,6 +65,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\eyny" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,7 +147,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.auto_run_all">
+  <component name="RunManager" selected="Python.eyny_todo_filter">
     <configuration name="Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tensorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -304,8 +302,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.auto_run_all" />
         <item itemvalue="Python.eyny_todo_filter" />
+        <item itemvalue="Python.auto_run_all" />
         <item itemvalue="Python.Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence" />
         <item itemvalue="Python.training" />
         <item itemvalue="Python.training" />
@@ -494,15 +492,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.40219378" visible="true" weight="0.1987315" />
-      <window_info id="Structure" order="1" sideWeight="0.5978062" side_tool="true" visible="true" weight="0.1987315" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3989899" visible="true" weight="0.1987315" />
+      <window_info id="Structure" order="1" sideWeight="0.6010101" side_tool="true" visible="true" weight="0.1987315" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295711" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38261852" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -628,15 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../eyny/eyny_todo_filter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/tensorflow/DeepLearningWithPython/Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -647,17 +635,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reserved.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reserved.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eyny/eyny_todo_filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#694#1190#0" />
+            <element signature="e#1220#1435#0" />
+          </folding>
         </state>
       </provider>
     </entry>

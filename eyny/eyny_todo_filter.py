@@ -15,6 +15,7 @@ def start_and_login():
             web.find_element_by_name("username").send_keys('chenvey2')
             web.find_element_by_name("password").send_keys('shenfen520')
             web.find_element_by_name("loginsubmit").click()
+            time.sleep(5)
             return web
         except:
             web.quit()

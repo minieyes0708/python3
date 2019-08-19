@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="62e524d3-cd3e-4686-8ec5-a61d5652e174" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eyny/eyny_todo_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../eyny/eyny_todo_filter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +12,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stock_management/update_database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,13 +66,13 @@
         <option value="$USER_HOME$/Desktop/tensorflow/NumberRecognition/training.py" />
         <option value="$USER_HOME$/Desktop/tensorflow/DeepLearningWithPython/Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence.py" />
         <option value="$PROJECT_DIR$/../../Lib/site-packages/tensorflow/python/keras/datasets/imdb.py" />
-        <option value="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" />
         <option value="$PROJECT_DIR$/reserved.txt" />
         <option value="$PROJECT_DIR$/../eyny/eyny_todo_filter.py" />
+        <option value="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="960" />
@@ -65,17 +84,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Program Files\Python36\minieyes\eyny" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,6 +155,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\eyny" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,7 +185,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.eyny_todo_filter">
+  <component name="RunManager" selected="Python.auto_run_all">
     <configuration name="Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tensorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -302,8 +321,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.eyny_todo_filter" />
         <item itemvalue="Python.auto_run_all" />
+        <item itemvalue="Python.eyny_todo_filter" />
         <item itemvalue="Python.Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence" />
         <item itemvalue="Python.training" />
         <item itemvalue="Python.training" />
@@ -493,9 +512,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3989899" visible="true" weight="0.1987315" />
-      <window_info id="Structure" order="1" sideWeight="0.6010101" side_tool="true" visible="true" weight="0.1987315" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.39730638" visible="true" weight="0.1987315" />
+      <window_info id="Structure" order="1" sideWeight="0.6026936" side_tool="true" visible="true" weight="0.1987315" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295711" />
@@ -545,13 +565,6 @@
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/StockExchangeWebController.py" />
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/update_database.py" />
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/filter_stock.py" />
-    <entry file="file://$PROJECT_DIR$/../stock_management/update_database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/capture_reserved.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -635,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reserved.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -658,6 +664,27 @@
             <element signature="e#694#1190#0" />
             <element signature="e#1220#1435#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="193" selection-start-line="193" selection-end-line="193" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stock_management/update_database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
         </state>
       </provider>
     </entry>

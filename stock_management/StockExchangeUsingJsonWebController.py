@@ -39,7 +39,7 @@ class StockExchangeUsingJsonWebController:
 
     def update_date(self, date):
         import json, re
-        self.web.implicitly_wait(180)
+        self.web.implicitly_wait(300)
         self.web.get(self.url % (date.year, date.month, date.day))
         self.result = json.loads(self.web.find_element_by_tag_name('pre').text)
         if self.find_data_group() == False:

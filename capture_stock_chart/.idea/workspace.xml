@@ -13,20 +13,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stock_management/update_database.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            <state relative-caret-position="310">
+              <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+              <folding>
+                <element signature="e#97#579#0" />
+                <element signature="e#609#694#0" />
+                <element signature="e#712#743#0" />
+                <element signature="e#800#815#0" />
+                <element signature="e#852#864#0" />
+                <element signature="e#905#1154#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,13 +65,13 @@
         <option value="$USER_HOME$/Desktop/tensorflow/NumberRecognition/training.py" />
         <option value="$USER_HOME$/Desktop/tensorflow/DeepLearningWithPython/Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence.py" />
         <option value="$PROJECT_DIR$/../../Lib/site-packages/tensorflow/python/keras/datasets/imdb.py" />
-        <option value="$PROJECT_DIR$/reserved.txt" />
         <option value="$PROJECT_DIR$/../eyny/eyny_todo_filter.py" />
+        <option value="$PROJECT_DIR$/reserved.txt" />
         <option value="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="960" />
@@ -160,7 +159,11 @@
           <expand>
             <path>
               <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Program Files\Python36\minieyes\eyny" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="C:\Program Files\Python36\minieyes\capture_stock_chart" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\stock_management" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -313,11 +316,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence" />
       <item itemvalue="Python.auto_run_all" />
+      <item itemvalue="Python.eyny_todo_filter" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.training" />
-      <item itemvalue="Python.Listing6.42_Training_and_evaluating_an_LSTM_using_reversed_sequence" />
-      <item itemvalue="Python.eyny_todo_filter" />
     </list>
     <recent_temporary>
       <list>
@@ -512,14 +515,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.39730638" visible="true" weight="0.1987315" />
-      <window_info id="Structure" order="1" sideWeight="0.6026936" side_tool="true" visible="true" weight="0.1987315" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3939052" visible="true" weight="0.1987315" />
+      <window_info id="Structure" order="1" sideWeight="0.60609484" side_tool="true" visible="true" weight="0.1987315" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295711" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295711" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -648,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reserved.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../eyny/eyny_todo_filter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
@@ -681,10 +676,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/reserved.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="310">
+          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+          <folding>
+            <element signature="e#97#579#0" />
+            <element signature="e#609#694#0" />
+            <element signature="e#712#743#0" />
+            <element signature="e#800#815#0" />
+            <element signature="e#852#864#0" />
+            <element signature="e#905#1154#0" />
+          </folding>
         </state>
       </provider>
     </entry>

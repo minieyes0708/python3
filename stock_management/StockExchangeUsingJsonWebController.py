@@ -14,15 +14,17 @@ class StockExchangeUsingJsonWebController:
         self.data_group = 'data5'
 
     def open(self):
-        from selenium import webdriver
-        self.web = webdriver.Chrome()
+        pass
+        # from selenium import webdriver
+        # self.web = webdriver.Chrome()
 
     def __enter__(self):
         self.open()
         return self
 
     def close(self):
-        self.web.quit()
+        pass
+        # self.web.quit()
 
     def __exit__(self, exc_type, exc_value, exc_tb):
         self.close()
@@ -38,11 +40,17 @@ class StockExchangeUsingJsonWebController:
         return False
 
     def update_date(self, date):
-        import json, re
-        self.web.implicitly_wait(300)
-        self.web.get(self.url % (date.year, date.month, date.day))
-        self.result = json.loads(self.web.find_element_by_tag_name('pre').text)
-        if self.find_data_group() == False:
+        import json, re, os
+        # self.web.implicitly_wait(600)
+        # self.web.get(self.url % (date.year, date.month, date.day))
+        # self.result = json.loads(self.web.find_element_by_tag_name('pre').text)
+        date_array = (date.year, date.month, date.day)
+        db_file = 'MI_INDEX_%d%02d%02d.json' % date_array
+        url = self.url % date_array
+        while not os.path.isfile(db_file):
+            input('please create db file from this url:\n' + url + '\n')
+        self.result = json.load(open(db_file, encoding='utf8'))
+        if not self.find_data_group():
             print('Cannot Find Data Group')
             return
         for stock_info in self.result[self.data_group]:

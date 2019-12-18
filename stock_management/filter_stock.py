@@ -20,8 +20,8 @@ def filter_stock():
     def deal_count_max(all_stock_info, start_index, end_index, now_days, past_days):
         if end_index - start_index < past_days: return False
 
-        max_deal_count = max([info['deal_stock_count'] for info in all_stock_info[end_index - past_days : end_index]])
-        if max_deal_count in [info['deal_stock_count'] for info in all_stock_info[end_index - now_days : end_index]]:
+        max_deal_count = max([int(info['deal_stock_count']) for info in all_stock_info[end_index - past_days : end_index]])
+        if max_deal_count in [int(info['deal_stock_count']) for info in all_stock_info[end_index - now_days : end_index]]:
             return True
         else:
             return False
@@ -29,16 +29,41 @@ def filter_stock():
     def highest_price_max(all_stock_info, start_index, end_index, now_days, past_days):
         if end_index - start_index < past_days: return False
 
-        max_highest_price = max([info['highest_price'] for info in all_stock_info[end_index - past_days : end_index]])
-        if max_highest_price in [info['highest_price'] for info in all_stock_info[end_index - now_days : end_index]]:
+        max_highest_price = max([float(info['highest_price'].replace(',','')) for info in all_stock_info[end_index - past_days : end_index]])
+        if max_highest_price in [float(info['highest_price'].replace(',','')) for info in all_stock_info[end_index - now_days : end_index]]:
             return True
         else:
             return False
 
+
+    def continue_rising(all_stock_info, start_index, end_index, inspect_days, diff_days, rising_percentage):
+        if end_index - start_index < max(inspect_days): return False
+
+        success = True
+        for day in inspect_days:
+            previous_price = float(all_stock_info[end_index - day - diff_days - 1]['close_price'].replace(',',''))
+            current_price = float(all_stock_info[end_index - day - 1]['close_price'].replace(',',''))
+            if previous_price * rising_percentage > current_price:
+                success = False
+                break
+        return success
+
+
+    def close_price_in_range(all_stock_info, start_index, end_index, minval, maxval):
+        import sys
+        if not minval: minval = sys.minfloat
+        if not maxval: maxval = sys.maxfloat
+        if float(all_stock_info[end_index - 1]['close_price']) < minval: return False
+        if float(all_stock_info[end_index - 1]['close_price']) > maxval: return False
+        return True
+
+
     filters = (
-        partial(rise_percent, percent = 1, days = 2),
-        partial(deal_count_max, now_days = 3, past_days = 30),
-        partial(highest_price_max, now_days = 3, past_days = 30),
+        partial(continue_rising, inspect_days = [0,10,20,30,40], diff_days = 10, rising_percentage = 1.02),
+        partial(close_price_in_range, minval = 10, maxval = 150),
+        # partial(rise_percent, percent = 1, days = 2),
+        # partial(deal_count_max, now_days = 3, past_days = 30),
+        # partial(highest_price_max, now_days = 3, past_days = 30),
     )
 
     passed_stocks = []

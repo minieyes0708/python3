@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="62e524d3-cd3e-4686-8ec5-a61d5652e174" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_run_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_run_all.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clear_MI_INDEX.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Clear_MI_INDEX.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../eyny/eyny_update2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../eyny/eyny_update2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../stock_management/filter_stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stock_management/filter_stock.py" afterDir="false" />
     </list>
@@ -14,44 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auto_run_all.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#55#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../stock_management/filter_stock.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="61" column="61" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stock_management/DBController.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="e#74#214#0" />
-                <element signature="e#244#406#0" />
-                <element signature="e#441#472#0" />
-                <element signature="e#503#518#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -78,7 +41,6 @@
         <option value="$PROJECT_DIR$/../stock_management/update_database.py" />
         <option value="$PROJECT_DIR$/../stock_management/Profiler.py" />
         <option value="$PROJECT_DIR$/stocks.txt" />
-        <option value="$PROJECT_DIR$/capture_stocks.py" />
         <option value="$USER_HOME$/Desktop/tensorflow/test.py" />
         <option value="$USER_HOME$/Desktop/tensorflow/NumerRecognition/training.py" />
         <option value="$USER_HOME$/Desktop/tensorflow/NumberRecognition/training.py" />
@@ -87,13 +49,14 @@
         <option value="$PROJECT_DIR$/../eyny/eyny_todo_filter.py" />
         <option value="$PROJECT_DIR$/../stock_management/StockExchangeUsingJsonWebController.py" />
         <option value="$PROJECT_DIR$/../eyny/eyny_update2.py" />
-        <option value="$PROJECT_DIR$/reserved.txt" />
         <option value="$PROJECT_DIR$/auto_run_all.py" />
         <option value="$PROJECT_DIR$/../stock_management/filter_stock.py" />
+        <option value="$PROJECT_DIR$/capture_stocks.py" />
+        <option value="$PROJECT_DIR$/reserved.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="960" />
@@ -108,6 +71,10 @@
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
+            <path>
+              <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Program Files\Python36\minieyes\capture_stock_chart" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
             <path>
               <item name="capture_stock_chart" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Program Files\Python36\minieyes\stock_management" type="442cc68d:ScopeViewTreeModel$RootNode" />
@@ -487,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560779081422</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add continue_rising and close_price_in_range filter">
+      <created>1576671485843</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576671485844</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -532,14 +506,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5530474" visible="true" weight="0.25792813" />
-      <window_info id="Structure" order="1" sideWeight="0.44695258" side_tool="true" visible="true" weight="0.25792813" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.489842" visible="true" weight="0.14006342" />
+      <window_info id="Structure" order="1" sideWeight="0.510158" side_tool="true" visible="true" weight="0.14006342" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295711" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28329572" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295711" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -573,7 +547,8 @@
     <MESSAGE value="script make functions, check __name__ == __main__ to execute, or called from others import" />
     <MESSAGE value="mis-spell coding to encoding" />
     <MESSAGE value="add unittest for Profiler&#10;&#10;- capture_stocks remove utf8 encoding setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="add unittest for Profiler&#10;&#10;- capture_stocks remove utf8 encoding setting" />
+    <MESSAGE value="add continue_rising and close_price_in_range filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add continue_rising and close_price_in_range filter" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../20190528_stock_management/WebController.py" />
@@ -661,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture_stocks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../stock_management/update_database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="961">
@@ -675,26 +643,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reserved.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auto_run_all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../stock_management/DBController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
+        <state relative-caret-position="1147">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#74#214#0" />
@@ -707,8 +658,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../stock_management/filter_stock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="61" column="61" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
+        <state relative-caret-position="248">
+          <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/capture_stocks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto_run_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reserved.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

@@ -59,12 +59,24 @@ def filter_stock():
 
 
     filters = (
-        partial(continue_rising, inspect_days = [0,10,20,30,40], diff_days = 10, rising_percentage = 1.02),
-        partial(close_price_in_range, minval = 10, maxval = 150),
-        # partial(rise_percent, percent = 1, days = 2),
-        # partial(deal_count_max, now_days = 3, past_days = 30),
-        # partial(highest_price_max, now_days = 3, past_days = 30),
+      (
+          partial(continue_rising, inspect_days = [0,10,20,30], diff_days = 10, rising_percentage = 1.02),
+          partial(close_price_in_range, minval = 10, maxval = 150),
+      ),
+      (
+          partial(rise_percent, percent = 1, days = 2),
+          partial(deal_count_max, now_days = 3, past_days = 30),
+          partial(highest_price_max, now_days = 3, past_days = 30),
+      ),
     )
+
+    def all_pass(filter_group, all_stock_info, start_index, end_index):
+        success = True
+        for filter in filter_group:
+            if not filter(all_stock_info, start_index, end_index):
+                success = False
+                break
+        return success
 
     passed_stocks = []
     profiler = Profiler()
@@ -83,10 +95,10 @@ def filter_stock():
         for (start_index, end_index) in loop_all_stocks():
             profiler.start()
             print('{0} - {1} / {2}'.format(start_index, end_index, len(all_stock_info)))
-            success = True
-            for filter in filters:
-                if not filter(all_stock_info, start_index, end_index):
-                    success = False
+            success = False
+            for filter_group in filters:
+                if all_pass(filter_group, all_stock_info, start_index, end_index):
+                    success = True
                     break
             if success:
                 passed_stocks.append(all_stock_info[start_index]['stock_id'])

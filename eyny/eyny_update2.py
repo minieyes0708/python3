@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # web driver
 import selenium, time, re, dbm
 from selenium import webdriver
@@ -31,8 +33,8 @@ def initialize(web, url):
     if url == None:
         web.get("http://www05.eyny.com/forum-576-1.html");
         (wait_for(web,'name','submit')).click()
-        ##(wait_for(web,'link_text','本土電影(上傳空間)')).click()
-        (wait_for(web,'link_text','日韓電影(上傳空間)')).click()
+        (wait_for(web,'link_text','本土電影(上傳空間)')).click()
+        # (wait_for(web,'link_text','日韓電影(上傳空間)')).click()
     else:
         web.get(url)
         (wait_for(web,'name','submit')).click()
@@ -58,9 +60,14 @@ while page < 20:
 
                 # insert database
                 for thread in threads:
-                    link = thread.find_element_by_tag_name("th").find_element_by_class_name("xst").get_attribute("href")
-                    title = thread.find_element_by_tag_name("th").find_element_by_class_name("xst").get_attribute("innerHTML")
-                    picture = thread.find_element_by_class_name("p_pre_td").find_elements_by_class_name("p_pre_none")
+                    while True:
+                        try:
+                            link = thread.find_element_by_tag_name("th").find_element_by_class_name("xst").get_attribute("href")
+                            title = thread.find_element_by_tag_name("th").find_element_by_class_name("xst").get_attribute("innerHTML")
+                            picture = thread.find_element_by_class_name("p_pre_td").find_elements_by_class_name("p_pre_none")
+                        except selenium.common.exceptions.NoSuchElementException:
+                            pass
+                        break
                     if len(picture): picture = picture[0].get_attribute("src")
                     else: picture = ""
                     thread_id = re.search("thread-(.*)\.html", link).group(1)

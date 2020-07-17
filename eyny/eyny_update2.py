@@ -93,6 +93,6 @@ while page < 20:
         except:
             raise
 
-newdb.close();
+newdb.close()
 db.close()
 web.quit()

@@ -9,3 +9,4 @@
 *.swp
 .svnignore
 __pycache__/
+/.vscode

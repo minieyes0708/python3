@@ -24,17 +24,17 @@ def wait_for(web,category, name):
 def initialize(web, url):
     web.get("http://www05.eyny.com/index.php")
     # login
-    login = web.find_element_by_link_text("登錄").click()
+    web.find_element_by_link_text("登錄").click()
     while not web.find_element_by_name('username').is_displayed():
         time.sleep(1)
     web.find_element_by_name("username").send_keys('chenvey2')
     web.find_element_by_name("password").send_keys('shenfen520')
     web.find_element_by_name("loginsubmit").click()
     if url == None:
-        web.get("http://www05.eyny.com/forum-576-1.html");
+        web.get("http://www05.eyny.com/forum-576-1.html")
         (wait_for(web,'name','submit')).click()
-        (wait_for(web,'link_text','本土電影(上傳空間)')).click()
-        # (wait_for(web,'link_text','日韓電影(上傳空間)')).click()
+        # (wait_for(web,'link_text','本土電影(上傳空間)')).click()
+        (wait_for(web,'link_text','日韓電影(上傳空間)')).click()
     else:
         web.get(url)
         (wait_for(web,'name','submit')).click()
@@ -70,7 +70,7 @@ while page < 20:
                         break
                     if len(picture): picture = picture[0].get_attribute("src")
                     else: picture = ""
-                    thread_id = re.search("thread-(.*)\.html", link).group(1)
+                    thread_id = re.search(r"thread-(.*)\.html", link).group(1)
                     if title not in db:
                         print("New Thread: " + title)
                         db[title] = picture + '|||' + title + '|||' + link

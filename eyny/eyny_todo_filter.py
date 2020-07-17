@@ -23,11 +23,10 @@ def start_and_login():
 def get_mega_links(web):
     url = [val.get_attribute('href') for val in web.find_elements_by_tag_name('a') if 'mega' in val.text or (val.get_attribute('href') != None and 'https://mega.nz' in val.get_attribute('href'))]
     groups = [re.search('(.*載點[^\n]+)', val.text) for val in web.find_elements_by_tag_name('td') if '影片載點' in val.text]
-    url.extend([grp.group(1) for grp in groups if grp != None and grp.groups != None and ('https://mega.nz' in grp.group(1) or 'https://drives.google' in grp.group(1))])
+    url.extend([grp.group(1) for grp in groups if grp != None and grp.groups != None and ('https://mega.nz' in grp.group(1) or 'https://drives.google' in grp.group(1) or 'https://katfile.com' in grp.group(1))])
     return url
 
 def get_passwords(web):
-    result = []
     groups = [re.search('(.*解壓密碼[^\n]+)', val.text) for val in web.find_elements_by_tag_name('td') if '解壓密碼' in val.text]
     return [grp.group(1) for grp in groups if grp != None and grp.groups != None]
 
@@ -47,7 +46,7 @@ while True:
         keys = list(tododb.keys())
         index = 0
         while index < len(keys):
-            [picture, title, link] = re.split('\|\|\|',tododb[keys[index]].decode('utf8'))
+            [picture, title, link] = re.split(r'\|\|\|',tododb[keys[index]].decode('utf8'))
             web.get(link)
             ##### 滿18歲 #####
             submit = [tag for tag in web.find_elements_by_tag_name('input') if re.search('18歲',tag.get_attribute('value'))]

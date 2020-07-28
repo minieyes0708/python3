@@ -68,13 +68,15 @@ class eyny:
             for val in self.web.find_elements_by_tag_name('a')
             if val.get_attribute('href') != None and is_valid_url(val.get_attribute('href'))
         ] + [
-            val.text
-            for val in self.web.find_elements_by_tag_name('td')
-            if 'https://' in val.text and is_valid_url(val.text[val.text.index('https://'):])
+            line
+            for td in self.web.find_elements_by_tag_name('td')
+            for line in td.text.split('\n')
+            if 'https://' in line and is_valid_url(line[line.index('https://'):])
         ]
     def get_passwords(self):
         return [
-            val.text
-            for val in self.web.find_elements_by_tag_name('td')
-            if '解壓密碼' in val.text
+            line
+            for td in self.web.find_elements_by_tag_name('td')
+            for line in td.text.split('\n')
+            if '解壓密碼' in line
         ]

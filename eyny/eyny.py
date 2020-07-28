@@ -1,7 +1,7 @@
 class eyny:
     def __init__(self):
         import dbm, time, selenium
-        self.db = dbm.open("./minieyes/db/eyny", "c")
+        self.db = dbm.open("./minieyes/eyny/db/eyny", "c")
         self.web = selenium.webdriver.Chrome()
         self.web.get("http://www05.eyny.com/index.php")
         self.web.find_element_by_link_text("登錄").click()

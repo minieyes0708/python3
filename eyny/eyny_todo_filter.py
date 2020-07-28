@@ -12,7 +12,7 @@ for index, title, link in eyny.loop_and_remove():
 
     print('========== %d/%d ==========\n' % (index, total))
     if len(url) != 0:
-        file = open('./eyny/todo_filter.txt', 'a')
+        file = open('./eyny/todo_filter.txt', 'a', encoding='UTF-8')
         file.write(
             '========== %d/%d ==========\nlink = %s\n%s\n%s\n' %
             (index, total, link, urls, passwds))

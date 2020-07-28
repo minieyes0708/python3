@@ -38,11 +38,11 @@ class eyny:
     def goto(self, where):
         if where == '本土電影':
             self.web.get("http://www05.eyny.com/forum-576-1.html")
-            self.waitfor('get_element_by_name','submit').click()
-            self.waitfor('get_element_by_link_text','本土電影(上傳空間)').click()
+            self.waitfor('find_element_by_name','submit').click()
+            self.waitfor('find_element_by_link_text','本土電影(上傳空間)').click()
         elif where == '日韓電影':
             self.web.get("http://www05.eyny.com/forum-576-1.html")
-            self.waitfor('get_element_by_name','submit').click()
+            self.waitfor('find_element_by_name','submit').click()
             self.waitfor(self.web,'link_text','日韓電影(上傳空間)').click()
         else:
             self.web.get(where)

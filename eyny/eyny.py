@@ -1,8 +1,9 @@
 class eyny:
     def __init__(self):
         import dbm, time, selenium
+        from selenium import webdriver
         self.db = dbm.open("./eyny/db/eyny", "c")
-        self.web = selenium.webdriver.Chrome()
+        self.web = webdriver.Chrome()
         self.web.get("http://www05.eyny.com/index.php")
         self.web.find_element_by_link_text("登錄").click()
         while not self.web.find_element_by_name("username").is_displayed(): time.sleep(1)

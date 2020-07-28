@@ -59,9 +59,9 @@ class eyny:
     def get_mega_links(self):
         # check url
         def is_valid_url(url):
-            if url.startswidth('https://mega.nz'): return True
-            if url.startswidth('https://katfile.com'): return True
-            if url.startswidth('https://drives.google'): return True
+            if url.startswith('https://mega.nz'): return True
+            if url.startswith('https://katfile.com'): return True
+            if url.startswith('https://drives.google'): return True
             return False
         return [
             val.get_attribute('href')

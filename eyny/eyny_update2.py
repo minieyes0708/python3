@@ -2,9 +2,9 @@
 from minieyes.eyny.eyny import eyny
 
 eyny = eyny()
+eyny.goto('本土電影')
 for page in range(0, 20):
     print('page ' + str(page))
-    eyny.goto('本土電影')
 
     # threads
     threads = [

@@ -53,7 +53,7 @@ class eyny:
         elif where == '日韓電影':
             self.web.get("http://www05.eyny.com/forum-576-1.html")
             self.waitfor('find_element_by_name', 'submit').click()
-            self.waitfor(self.web, 'link_text', '日韓電影(上傳空間)').click()
+            self.waitfor('link_text', '日韓電影(上傳空間)').click()
         else:
             self.web.get(where)
 

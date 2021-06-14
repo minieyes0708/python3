@@ -10,3 +10,4 @@
 .svnignore
 __pycache__/
 /.vscode
+/tags

@@ -80,19 +80,18 @@ if __name__ == '__main__':
     query = ''
     stockid = ''
     commands = ''
-    while query != 'exit':
+    while query != 'exit' and query != 'quit' and query != 'bye' and query != 'q':
         print('0: [update] todo')
         print('1: [show] todo')
-        print('2: [set] stockid')
+        print('2: [set] stockid + goto')
         print('3: [goto] stock')
-        print('4: [expire] stock')
+        print('4: [expire] stock + remove + show')
         print('5: [remove] stock')
         print('6: [show_expire]')
-        print('current stock id: ' + stockid)
-        print('enter exit to quit')
+        print(f'current id {stockid} in {len(handler.todo)} stocks')
         if len(commands) == 0:
-            commands = input('> ').strip().split(',')
-        pars = commands[0].split()
+            commands = [v.strip() for v in input('> ').strip().split(',')]
+        pars = [v.strip() for v in commands[0].split()]
         commands = commands[1:]
         query = pars[0]
         if query == '0' or query == 'update':
@@ -107,6 +106,7 @@ if __name__ == '__main__':
                 stockid = pars[1]
             else:
                 stockid = input('stock id = ').strip()
+            dog.goto(stockid)
         elif query == '3' or query == 'goto':
             dog.goto(stockid)
         elif query == '4' or query == 'expire':
@@ -115,6 +115,8 @@ if __name__ == '__main__':
             else:
                 expire_month = eval(input('expire months = ').strip())
             handler.add_expire(handler.todo[stockid], expire_month)
+            del handler.todo[stockid]
+            handler.show_todo()
         elif query == '5' or query == 'remove':
             del handler.todo[stockid]
         elif query == '6' or query == 'show_expire':

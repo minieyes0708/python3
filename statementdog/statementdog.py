@@ -117,6 +117,10 @@ if __name__ == '__main__':
             handler.add_expire(handler.todo[stockid], expire_month)
             del handler.todo[stockid]
             handler.show_todo()
+
+            if len(handler.todo):
+                stockid = list(handler.todo.keys())[-1]
+                dog.goto(stockid)
         elif query == '5' or query == 'remove':
             del handler.todo[stockid]
         elif query == '6' or query == 'show_expire':

@@ -37,6 +37,16 @@ class statementdog:
         for td in results:
             records.append(dict(zip(keys, td.text.split())))
         return records
+    def select_tracking(self):
+        self.web.get('https://statementdog.com/feeds')
+        div = self.waitfor('find_element_by_class_name', 'stock-list')
+
+        records = []
+        keys = ('stockid', 'stockname')
+        for ul in div.find_elements_by_tag_name('ul'):
+            li = ul.find_element_by_class_name('stock-id-name')
+            records.append(dict(zip(keys, li.text.split())))
+        return records
     def waitfor(self, attrname, *args):
         import time
         import selenium
@@ -44,6 +54,7 @@ class statementdog:
             try:
                 return self.web.__getattribute__(attrname)(*args)
             except selenium.common.exceptions.NoSuchElementException:
+                print('waiting for ' + attrname + ' ' + ' '.join(str(v) for v in args))
                 time.sleep(1)
             except:
                 raise
@@ -88,8 +99,9 @@ if __name__ == '__main__':
         print('4: [expire] stock + remove + show')
         print('5: [remove] stock')
         print('6: [show_expire]')
-        print('7: [update2] todo')
-        print('8: [clear] todo')
+        print('7: [update2] all list1')
+        print('8: [update3] tracking')
+        print('9: [clear] todo')
         print(f'current id {stockid} in {len(handler.todo)} stocks')
         if len(commands) == 0:
             commands = [v.strip() for v in input('> ').strip().split(',')]
@@ -101,6 +113,11 @@ if __name__ == '__main__':
             handler.add_todo(records)
             records = dog.select_stock('近三月營收年增率3個月內漲破近12月')
             handler.add_todo(records)
+            handler.show_todo()
+
+            if len(handler.todo):
+                stockid = list(handler.todo.keys())[-1]
+                dog.goto(stockid)
         elif query == '1' or query == 'show':
             handler.show_todo()
         elif query == '2' or query == 'set':
@@ -125,12 +142,30 @@ if __name__ == '__main__':
                 dog.goto(stockid)
         elif query == '5' or query == 'remove':
             del handler.todo[stockid]
+
+            if len(handler.todo):
+                stockid = list(handler.todo.keys())[-1]
+                dog.goto(stockid)
         elif query == '6' or query == 'show_expire':
             handler.show_expire()
         elif query == '7' or query == 'update2':
             records = dog.select_stock('')
             handler.add_todo(records)
-        elif query == '8' or query == 'clear':
+            handler.show_todo()
+
+            if len(handler.todo):
+                stockid = list(handler.todo.keys())[-1]
+                dog.goto(stockid)
+        elif query == '8' or query == 'update3':
+            records = dog.select_tracking()
+            for record in records:
+                handler.todo[record['stockid']] = record
+            handler.show_todo()
+
+            if len(handler.todo):
+                stockid = list(handler.todo.keys())[-1]
+                dog.goto(stockid)
+        elif query == '9' or query == 'clear':
             handler.todo.clear()
 
     #  print('press any key to continue')

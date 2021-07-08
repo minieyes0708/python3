@@ -88,6 +88,8 @@ if __name__ == '__main__':
         print('4: [expire] stock + remove + show')
         print('5: [remove] stock')
         print('6: [show_expire]')
+        print('7: [update2] todo')
+        print('8: [clear] todo')
         print(f'current id {stockid} in {len(handler.todo)} stocks')
         if len(commands) == 0:
             commands = [v.strip() for v in input('> ').strip().split(',')]
@@ -125,6 +127,11 @@ if __name__ == '__main__':
             del handler.todo[stockid]
         elif query == '6' or query == 'show_expire':
             handler.show_expire()
+        elif query == '7' or query == 'update2':
+            records = dog.select_stock('')
+            handler.add_todo(records)
+        elif query == '8' or query == 'clear':
+            handler.todo.clear()
 
     #  print('press any key to continue')
     #  input()

@@ -75,7 +75,7 @@ class record_handler:
     def add_expire(self, record, expire_month):
         from datetime import datetime
         from dateutil.relativedelta import relativedelta
-        self.expire[record['stockid']] = datetime.now() + relativedelta(months=expire_month)
+        self.expire[record['stockid']] = (datetime.now() + relativedelta(months=expire_month)).replace(day=1)
     def show_todo(self):
         for key, value in self.todo.items():
             print(value)

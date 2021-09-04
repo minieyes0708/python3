@@ -160,12 +160,12 @@ class interactive_console:
             self.stockid = self.pars[1]
         else:
             self.stockid = input('stock id = ').strip()
-        self.dog.goto(stockid)
+        self.dog.goto(self.stockid)
     def goto(self):
         self.dog.goto(self.stockid)
     def expire(self):
         expire_month = eval(self.pars[1]) if len(self.pars) > 1 else eval(input('expire months = ').strip())
-        self.handler.add_expire(self.handler.todo[stockid], expire_month)
+        self.handler.add_expire(self.handler.todo[self.stockid], expire_month)
         self.remove()
     def remove(self):
         del self.handler.todo[self.stockid]

@@ -83,11 +83,7 @@ class record_handler:
         for key, value in self.expire.items():
             print(key, value)
 
-if __name__ == '__main__':
-    handler = record_handler()
-    dog = statementdog()
-    dog.login()
-
+def interactive_console(dog, handler):
     query = ''
     stockid = ''
     commands = ''
@@ -167,6 +163,13 @@ if __name__ == '__main__':
                 dog.goto(stockid)
         elif query == '9' or query == 'clear':
             handler.todo.clear()
+
+if __name__ == '__main__':
+    handler = record_handler()
+    dog = statementdog()
+    dog.login()
+
+    interactive_console(dog, handler)
 
     #  print('press any key to continue')
     #  input()

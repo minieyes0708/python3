@@ -105,7 +105,7 @@ class record_handler:
         count = 0
         for record in records:
             count = count + 1
-            print(f'{count}/{len(records)}')})
+            print(f'{count}/{len(records)}')
             if not record['stockid'] in self.expire or self.expire[record['stockid']] < now:
                 if condition and condition(record):
                     self.todo[record['stockid']] = record

@@ -117,11 +117,18 @@ class record_handler:
         for key, value in self.expire.items():
             print(key, value)
 
-def interactive_console(dog, handler):
-    query = ''
-    stockid = ''
-    commands = ''
-    while query != 'exit' and query != 'quit' and query != 'bye' and query != 'q':
+class interactive_console:
+    def __init__(self, dog, handler):
+        self.dog = dog
+        self.handler = handler
+
+        self.pars = []
+        self.query = ''
+        self.stockid = ''
+        self.commands = []
+        self.quit_commands = ['exit', 'quit', 'bye', 'q']
+
+    def print_help(self):
         print('0: [update] todo')
         print('1: [show] todo')
         print('2: [set] stockid + goto')
@@ -132,78 +139,74 @@ def interactive_console(dog, handler):
         print('7: [update2] all list1')
         print('8: [update3] tracking')
         print('9: [clear] todo')
-        print(f'current id {stockid} in {len(handler.todo)} stocks')
-        if len(commands) == 0:
-            commands = [v.strip() for v in input('> ').strip().split(',')]
-        pars = [v.strip() for v in commands[0].split()]
-        commands = commands[1:]
-        query = pars[0]
-        if query == '0' or query == 'update':
-            records = dog.select_stock('近三月營收年增率3個月內漲破近6月')
-            handler.add_todo(records)
-            records = dog.select_stock('近三月營收年增率3個月內漲破近12月')
-            handler.add_todo(records)
-            handler.show_todo()
+        print(f'current id {self.stockid} in {len(self.handler.todo)} stocks')
+    def get_commands(self):
+        if len(self.commands) == 0:
+            self.commands = [v.strip() for v in input('> ').strip().split(',')]
+    def parse_next_command(self):
+        self.pars = [v.strip() for v in self.commands[0].split()]
+        self.commands = self.commands[1:]
+        if len(self.pars): self.query = self.pars[0]
 
-            if len(handler.todo):
-                stockid = list(handler.todo.keys())[-1]
-                dog.goto(stockid)
-        elif query == '1' or query == 'show':
-            handler.show_todo()
-        elif query == '2' or query == 'set':
-            if len(pars) > 1:
-                stockid = pars[1]
-            else:
-                stockid = input('stock id = ').strip()
-            dog.goto(stockid)
-        elif query == '3' or query == 'goto':
-            dog.goto(stockid)
-        elif query == '4' or query == 'expire':
-            if len(pars) > 1:
-                expire_month = eval(pars[1])
-            else:
-                expire_month = eval(input('expire months = ').strip())
-            handler.add_expire(handler.todo[stockid], expire_month)
-            del handler.todo[stockid]
-            handler.show_todo()
+    def goto_last_stock(self):
+        if len(self.handler.todo):
+            self.stockid = list(self.handler.todo.keys())[-1]
+            self.dog.goto(self.stockid)
+    def update(self):
+        self.handler.add_todo(self.dog.select_stock('近三月營收年增率3個月內漲破近6月'))
+        self.handler.add_todo(dog.select_stock('近三月營收年增率3個月內漲破近12月'))
+        self.handler.show_todo()
+        self.goto_last_stock()
+    def show(self):
+        self.handler.show_todo()
+    def set(self):
+        if len(self.pars) > 1:
+            self.stockid = self.pars[1]
+        else:
+            self.stockid = input('stock id = ').strip()
+        self.dog.goto(stockid)
+    def goto(self):
+        self.dog.goto(self.stockid)
+    def expire(self):
+        expire_month = eval(self.pars[1]) if len(self.pars) > 1 else eval(input('expire months = ').strip())
+        self.handler.add_expire(self.handler.todo[stockid], expire_month)
+        self.remove()
+    def remove(self):
+        del self.handler.todo[self.stockid]
+        self.handler.show_todo()
+        self.goto_last_stock()
+    def show_expire(self):
+        self.handler.show_expire()
+    def update2(self):
+        self.handler.add_todo(self.dog.select_stock(''))
+        self.handler.show_todo()
+        self.goto_last_stock()
+    def update3(self):
+        for record in self.dog.select_tracking():
+            self.handler.todo[record['stockid']] = record
+        handler.show_todo()
+        self.goto_last_stock()
+    def clear(self):
+        handler.todo.clear()
 
-            if len(handler.todo):
-                stockid = list(handler.todo.keys())[-1]
-                dog.goto(stockid)
-        elif query == '5' or query == 'remove':
-            del handler.todo[stockid]
+    def mainloop(self):
+        while self.query not in self.quit_commands:
+            self.print_help()
+            self.get_commands()
+            self.parse_next_command()
 
-            if len(handler.todo):
-                stockid = list(handler.todo.keys())[-1]
-                dog.goto(stockid)
-        elif query == '6' or query == 'show_expire':
-            handler.show_expire()
-        elif query == '7' or query == 'update2':
-            records = dog.select_stock('')
-            handler.add_todo(records)
-            handler.show_todo()
-
-            if len(handler.todo):
-                stockid = list(handler.todo.keys())[-1]
-                dog.goto(stockid)
-        elif query == '8' or query == 'update3':
-            records = dog.select_tracking()
-            for record in records:
-                handler.todo[record['stockid']] = record
-            handler.show_todo()
-
-            if len(handler.todo):
-                stockid = list(handler.todo.keys())[-1]
-                dog.goto(stockid)
-        elif query == '9' or query == 'clear':
-            handler.todo.clear()
+            try:
+                getattr(self, self.query)()
+            except AttributeError:
+                pass
 
 if __name__ == '__main__':
     handler = record_handler()
     dog = statementdog()
     dog.login()
 
-    interactive_console(dog, handler)
+    console = interactive_console(dog, handler)
+    console.mainloop()
 
     #  print('press any key to continue')
     #  input()

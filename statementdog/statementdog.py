@@ -95,13 +95,14 @@ class record_handler:
     def add_todo(self, records, condition = None):
         from datetime import datetime
         now = datetime.now()
-        count = 0
+        vliad_records = []
         for record in records:
-            count = count + 1
-            print(f'{count}/{len(records)}')
             if not record['stockid'] in self.expire or self.expire[record['stockid']] < now:
-                if condition and condition(record):
-                    self.todo[record['stockid']] = record
+                vliad_records.append(record)
+        for index, record in enumerate(records):
+            print(f'{index+1}/{len(vliad_records)}')
+            if condition and condition(record):
+                self.todo[record['stockid']] = record
     def add_expire(self, record, expire_month):
         from datetime import datetime
         from dateutil.relativedelta import relativedelta

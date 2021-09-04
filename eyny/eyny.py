@@ -15,7 +15,7 @@ class eyny:
         self.web.find_element_by_name("loginsubmit").click()
 
     def __del__(self):
-        self.web.quit()
+        # self.web.quit()
         self.db.close()
 
     def insert_or_ignore(self, title, link):

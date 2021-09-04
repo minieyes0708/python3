@@ -88,7 +88,6 @@ class statementdog:
         info = self.web.find_elements_by_class_name('info')
         while len(info) == 0:
             info = self.web.find_elements_by_class_name('info')
-            print('length of info is 0')
             time.sleep(1)
         div_squares = [div for div in info[0].find_elements_by_class_name('square')]
         div_yoy = [div for div in div_squares if 'YOY' in div.find_element_by_class_name('idx').text]
@@ -100,12 +99,16 @@ class record_handler:
         import shelve
         self.todo = shelve.open('statementdog/todo.txt')
         self.expire = shelve.open('statementdog/expire.txt')
-    def add_todo(self, records):
+    def add_todo(self, records, condition = None):
         from datetime import datetime
         now = datetime.now()
+        count = 0
         for record in records:
+            count = count + 1
+            print(f'{count}/{len(records)}')})
             if not record['stockid'] in self.expire or self.expire[record['stockid']] < now:
-                self.todo[record['stockid']] = record
+                if condition and condition(record):
+                    self.todo[record['stockid']] = record
     def add_expire(self, record, expire_month):
         from datetime import datetime
         from dateutil.relativedelta import relativedelta
@@ -178,7 +181,8 @@ class interactive_console:
     def show_expire(self):
         self.handler.show_expire()
     def update2(self):
-        self.handler.add_todo(self.dog.select_stock(''))
+        self.handler.add_todo(self.dog.select_stock(''),
+                condition = (lambda record: self.dog.getYoY(record['stockid']) != '無'))
         self.handler.show_todo()
         self.goto_last_stock()
     def update3(self):

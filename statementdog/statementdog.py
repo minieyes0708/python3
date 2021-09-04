@@ -11,12 +11,18 @@ class statementdog:
     def select_stock(self, revenue_option):
         import time
         from selenium.webdriver.support.ui import Select
+        ################
+        # Select List1 #
+        ################
         self.web.get('https://statementdog.com/screeners/custom')
         self.web.execute_script('importAll(0)')
         self.web.execute_script('$(".menu-title").removeClass("selected");')
         self.web.execute_script('$(".menu-title").eq(7).addClass("selected");')
         self.web.execute_script('$(".menu_wrapper").hide();')
         self.web.execute_script('$(".menu_wrapper").eq(7).show().find("li:visible").eq(0).trigger("click");')
+        ########################
+        # Additional Condition #
+        ########################
         if revenue_option == '近三月營收年增率3個月內漲破近6月':
             index_element = self.web.find_element_by_id('營收年增率突破指標1')
             time_element = index_element.find_element_by_name('time')
@@ -27,16 +33,32 @@ class statementdog:
             time_element = index_element.find_element_by_name('time')
             Select(time_element).select_by_value("3")
             self.web.execute_script('addIdx2("營收年增率突破指標2", "目前")')
+        ################
+        # Start Select #
+        ################
         self.web.find_element_by_link_text('開始選股').click()
+        ###################
+        # Extract Results #
+        ###################
         results = self.waitfor('find_elements_by_css_selector', 'td.r-td2')
         while len(results) == 0:
             time.sleep(1)
             results = self.web.find_elements_by_css_selector('td.r-td2')
+        ###############
+        # Get Records #
+        ###############
         records = []
         keys = ('stockid', 'stockname')
         for td in results:
             records.append(dict(zip(keys, td.text.split())))
-        return records
+        ########################
+        # Filter Valid Records #
+        ########################
+        valid_records = []
+        for record in records:
+            if self.getYoY(record['stockid']) != '無':
+                valid_records.append(record)
+        return valid_records
     def select_tracking(self):
         self.web.get('https://statementdog.com/feeds')
         div = self.waitfor('find_element_by_class_name', 'stock-list')
@@ -60,6 +82,18 @@ class statementdog:
                 raise
     def goto(self, stockid):
         self.web.get(f'https://statementdog.com/analysis/{stockid}/long-term-and-short-term-monthly-revenue-yoy')
+    def getYoY(self, stockid):
+        import time
+        self.web.get(f'https://statementdog.com/analysis/{stockid}')
+        info = self.web.find_elements_by_class_name('info')
+        while len(info) == 0:
+            info = self.web.find_elements_by_class_name('info')
+            print('length of info is 0')
+            time.sleep(1)
+        div_squares = [div for div in info[0].find_elements_by_class_name('square')]
+        div_yoy = [div for div in div_squares if 'YOY' in div.find_element_by_class_name('idx').text]
+        assert len(div_yoy) != 0, 'length of yoy_square is 0'
+        return div_yoy[0].find_element_by_class_name('v').text
 
 class record_handler:
     def __init__(self):

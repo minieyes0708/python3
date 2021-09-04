@@ -3,6 +3,11 @@ from minieyes.eyny.eyny import eyny
 
 eyny = eyny()
 total = eyny.count()
+eyny.set_mega_links((
+    'https://mega.nz',
+    #  'https://katfile.com',
+    'https://drives.google',
+))
 for index, title, link in eyny.loop_and_remove():
     eyny.goto(link)
     eyny.confirm18()

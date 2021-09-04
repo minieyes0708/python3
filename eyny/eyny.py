@@ -13,16 +13,13 @@ class eyny:
         self.web.find_element_by_name("username").send_keys('chenvey2')
         self.web.find_element_by_name("password").send_keys('shenfen520')
         self.web.find_element_by_name("loginsubmit").click()
-
     def __del__(self):
         # self.web.quit()
         self.db.close()
-
     def insert_or_ignore(self, title, link):
         if title not in self.db:
             print("New Thread: " + title)
             self.db[title] = link
-
     def loop_and_remove(self):
         keys = self.db.keys()
         for i in range(len(keys)):
@@ -30,10 +27,8 @@ class eyny:
             val = self.db[key].decode('utf8')
             yield (i, key, val)
             del self.db[key]
-
     def count(self):
         return len(self.db.keys())
-
     def waitfor(self, attrname, *args):
         import time
         import selenium
@@ -44,7 +39,6 @@ class eyny:
                 time.sleep(1)
             except:
                 raise
-
     def goto(self, where):
         if where == '本土電影':
             self.web.get("http://www05.eyny.com/forum-576-1.html")
@@ -56,7 +50,6 @@ class eyny:
             self.waitfor('find_element_by_link_text', '日韓電影(上傳空間)').click()
         else:
             self.web.get(where)
-
     def confirm18(self):
         import time
         submit = [
@@ -67,16 +60,14 @@ class eyny:
         if len(submit):
             submit[0].click()
             time.sleep(5)
-
+    def set_mega_links(self, links):
+        self.mega_links = links
     def get_mega_links(self):
         # check url
         def is_valid_url(url):
-            if url.startswith('https://mega.nz'):
-                return True
-            if url.startswith('https://katfile.com'):
-                return True
-            if url.startswith('https://drives.google'):
-                return True
+            for link_url in self.mega_links:
+                if url.startswith(link_url):
+                    return True
             return False
         return [
             val.get_attribute('href')

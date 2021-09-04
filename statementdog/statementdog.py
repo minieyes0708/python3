@@ -51,14 +51,7 @@ class statementdog:
         keys = ('stockid', 'stockname')
         for td in results:
             records.append(dict(zip(keys, td.text.split())))
-        ########################
-        # Filter Valid Records #
-        ########################
-        valid_records = []
-        for record in records:
-            if self.getYoY(record['stockid']) != '無':
-                valid_records.append(record)
-        return valid_records
+        return records
     def select_tracking(self):
         self.web.get('https://statementdog.com/feeds')
         div = self.waitfor('find_element_by_class_name', 'stock-list')

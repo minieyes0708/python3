@@ -115,7 +115,10 @@ class record_handler:
             print(value)
     def show_expire(self, stockid = None):
         if stockid:
-            print(stockid, self.expire[stockid])
+            if stockid not in self.expire:
+                print('stockid not fond')
+            else:
+                print(stockid, self.expire[stockid])
         else:
             for key, value in self.expire.items():
                 print(key, value)

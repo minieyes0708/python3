@@ -15,6 +15,7 @@ for index, title, link in eyny.loop_and_remove():
     url, passwd = eyny.get_mega_links(), eyny.get_passwords()
     urls, passwds = '\n'.join(url), '\n'.join(passwd)
 
+    print('{\n')
     print('========== %d/%d ==========\n' % (index, total))
     if len(url) != 0:
         file = open('./eyny/todo_filter.txt', 'a', encoding='UTF-8')
@@ -23,3 +24,4 @@ for index, title, link in eyny.loop_and_remove():
             (index, total, link, urls, passwds))
         file.close()
         print('link = %s\n%s\n%s\n' % (link, urls, passwds))
+    print('}\n')

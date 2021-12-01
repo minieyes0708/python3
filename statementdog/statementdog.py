@@ -78,14 +78,17 @@ class statementdog:
     def getYoY(self, stockid):
         import time
         self.web.get(f'https://statementdog.com/analysis/{stockid}')
-        info = self.web.find_elements_by_class_name('info')
+        info = self.web.find_elements_by_class_name('company-latest-valuation-container')
         while len(info) == 0:
-            info = self.web.find_elements_by_class_name('info')
+            info = self.web.find_elements_by_class_name('company-latest-valuation-container')
+            print('waiting company-latest-valuation-container')
             time.sleep(1)
-        div_squares = [div for div in info[0].find_elements_by_class_name('square')]
-        div_yoy = [div for div in div_squares if 'YOY' in div.find_element_by_class_name('idx').text]
-        assert len(div_yoy) != 0, 'length of yoy_square is 0'
-        return div_yoy[0].find_element_by_class_name('v').text
+        for tr in info[0].find_elements_by_tag_name('tr'):
+            th = tr.find_elements_by_tag_name('th')[0]
+            if 'YOY' in th.text:
+                print('YOY = ' + tr.find_elements_by_tag_name('td')[0].text)
+                return tr.find_elements_by_tag_name('td')[0].text
+        raise RuntimeError("YOY Not Found")
 
 class record_handler:
     def __init__(self):
@@ -110,9 +113,12 @@ class record_handler:
     def show_todo(self):
         for key, value in self.todo.items():
             print(value)
-    def show_expire(self):
-        for key, value in self.expire.items():
-            print(key, value)
+    def show_expire(self, stockid = None):
+        if stockid:
+            print(stockid, self.expire[stockid])
+        else:
+            for key, value in self.expire.items():
+                print(key, value)
 
 class interactive_console:
     def __init__(self, dog, handler):
@@ -173,7 +179,7 @@ class interactive_console:
         self.handler.show_todo()
         self.goto_last_stock()
     def show_expire(self):
-        self.handler.show_expire()
+        self.handler.show_expire(self.pars[1] if len(self.pars) > 1 else None)
     def update2(self):
         self.handler.add_todo(self.dog.select_stock(''),
                 condition = (lambda record: self.dog.getYoY(record['stockid']) != '無'))

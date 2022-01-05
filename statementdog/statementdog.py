@@ -93,8 +93,9 @@ class statementdog:
 class record_handler:
     def __init__(self):
         import shelve
-        self.todo = shelve.open('statementdog/todo.txt')
-        self.expire = shelve.open('statementdog/expire.txt')
+        folder = 'C:/Users/chenv/AppData/Local/Programs/Python/Python39/minieyes/'
+        self.todo = shelve.open(folder + 'statementdog/todo.txt')
+        self.expire = shelve.open(folder + 'statementdog/expire.txt')
     def add_todo(self, records, condition = None):
         from datetime import datetime
         now = datetime.now()

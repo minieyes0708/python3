@@ -8,20 +8,22 @@ eyny.set_mega_links((
     #  'https://katfile.com',
     'https://drives.google',
 ))
+
+file = open('./eyny/todo_filter.txt', 'a', encoding='UTF-8')
 for index, title, link in eyny.loop_and_remove():
+    print('========== %d/%d ==========' % (index, total))
+    print('{0}({1})'.format(title.decode('utf8'), link))
     eyny.goto(link)
     eyny.confirm18()
 
     url, passwd = eyny.get_mega_links(), eyny.get_passwords()
     urls, passwds = '\n'.join(url), '\n'.join(passwd)
 
-    print('{\n')
-    print('========== %d/%d ==========\n' % (index, total))
     if len(url) != 0:
-        file = open('./eyny/todo_filter.txt', 'a', encoding='UTF-8')
+        file.write('{\n')
         file.write(
             '========== %d/%d ==========\nlink = %s\n%s\n%s\n' %
             (index, total, link, urls, passwds))
-        file.close()
-        print('link = %s\n%s\n%s\n' % (link, urls, passwds))
-    print('}\n')
+        print('%s\n%s' % (urls, passwds))
+        file.write('}\n')
+file.close()

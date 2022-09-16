@@ -2,7 +2,6 @@ class eyny:
     def __init__(self):
         import dbm
         import time
-        import selenium
         from selenium import webdriver
         self.db = dbm.open("./eyny/db/eyny", "c")
         self.web = webdriver.Chrome()
@@ -13,6 +12,7 @@ class eyny:
         self.web.find_element_by_name("username").send_keys('chenvey2')
         self.web.find_element_by_name("password").send_keys('shenfen520')
         self.web.find_element_by_name("loginsubmit").click()
+        time.sleep(5)
     def __del__(self):
         # self.web.quit()
         self.db.close()

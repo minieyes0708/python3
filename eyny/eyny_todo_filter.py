@@ -5,7 +5,10 @@ eyny = eyny()
 total = eyny.count()
 eyny.set_mega_links((
     'https://mega.nz',
-    #  'https://katfile.com',
+    'http://www.xunniupan',
+    'https://rosefile.net',
+     # 'https://katfile.com',
+    'http://drives.google',
     'https://drives.google',
 ))
 

@@ -78,10 +78,10 @@ class statementdog:
     def getYoY(self, stockid):
         import time
         self.web.get(f'https://statementdog.com/analysis/{stockid}')
-        info = self.web.find_elements_by_class_name('company-latest-valuation-container')
+        info = self.web.find_elements_by_class_name('company-latest-valuation')
         while len(info) == 0:
-            info = self.web.find_elements_by_class_name('company-latest-valuation-container')
-            print('waiting company-latest-valuation-container')
+            info = self.web.find_elements_by_class_name('company-latest-valuation')
+            print('waiting company-latest-valuation')
             time.sleep(1)
         for tr in info[0].find_elements_by_tag_name('tr'):
             th = tr.find_elements_by_tag_name('th')[0]

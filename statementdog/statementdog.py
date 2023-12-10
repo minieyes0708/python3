@@ -1,13 +1,14 @@
+from selenium.webdriver.common.by import By
 class statementdog:
     def __init__(self):
         from selenium import webdriver
         self.web = webdriver.Chrome()
         self.web.get('https://statementdog.com')
     def login(self):
-        self.waitfor('find_element_by_link_text', '登入').click()
-        self.waitfor('find_element_by_id', 'user_email').send_keys('chenvey2@gmail.com')
-        self.waitfor('find_element_by_id', 'user_password').send_keys('shenfen520')
-        self.web.find_element_by_class_name('submit-btn').click()
+        self.waitfor(By.LINK_TEXT, '登入').click()
+        self.waitfor(By.ID, 'user_email').send_keys('chenvey2@gmail.com')
+        self.waitfor(By.ID, 'user_password').send_keys('shenfen520')
+        self.web.find_element(By.CLASS_NAME, 'submit-btn').click()
     def select_stock(self, revenue_option):
         import time
         from selenium.webdriver.support.ui import Select
@@ -24,23 +25,23 @@ class statementdog:
         # Additional Condition #
         ########################
         if revenue_option == '近三月營收年增率3個月內漲破近6月':
-            index_element = self.web.find_element_by_id('營收年增率突破指標1')
-            time_element = index_element.find_element_by_name('time')
+            index_element = self.web.find_element(By.ID, '營收年增率突破指標1')
+            time_element = index_element.find_element(By.NAME, 'time')
             Select(time_element).select_by_value("3")
             self.web.execute_script('addIdx2("營收年增率突破指標1", "目前")')
         elif revenue_option == '近三月營收年增率3個月內漲破近12月':
-            index_element = self.web.find_element_by_id('營收年增率突破指標2')
-            time_element = index_element.find_element_by_name('time')
+            index_element = self.web.find_element(By.ID, '營收年增率突破指標2')
+            time_element = index_element.find_element(By.NAME, 'time')
             Select(time_element).select_by_value("3")
             self.web.execute_script('addIdx2("營收年增率突破指標2", "目前")')
         ################
         # Start Select #
         ################
-        self.web.find_element_by_link_text('開始選股').click()
+        self.web.find_element(By.LINK_TEXT, '開始選股').click()
         ###################
         # Extract Results #
         ###################
-        results = self.waitfor('find_elements_by_css_selector', 'td.r-td2')
+        results = self.waitfor(By.CSS_SELECTOR, 'td.r-td2')
         while len(results) == 0:
             time.sleep(1)
             results = self.web.find_elements_by_css_selector('td.r-td2')
@@ -54,22 +55,22 @@ class statementdog:
         return records
     def select_tracking(self):
         self.web.get('https://statementdog.com/feeds')
-        div = self.waitfor('find_element_by_class_name', 'stock-list')
+        div = self.waitfor(By.CLASS_NAME, 'stock-list')
 
         records = []
         keys = ('stockid', 'stockname')
         for ul in div.find_elements_by_tag_name('ul'):
-            li = ul.find_element_by_class_name('stock-id-name')
+            li = ul.find_element(By.CLASS_NAME, 'stock-id-name')
             records.append(dict(zip(keys, li.text.split())))
         return records
-    def waitfor(self, attrname, *args):
+    def waitfor(self, by, *args):
         import time
         import selenium
         while True:
             try:
-                return self.web.__getattribute__(attrname)(*args)
+                return self.web.find_element(by, *args)
             except selenium.common.exceptions.NoSuchElementException:
-                print('waiting for ' + attrname + ' ' + ' '.join(str(v) for v in args))
+                print('waiting for ' + by + ' ' + ' '.join(str(v) for v in args))
                 time.sleep(1)
             except:
                 raise
@@ -93,7 +94,7 @@ class statementdog:
 class record_handler:
     def __init__(self):
         import shelve
-        folder = 'C:/Users/chenv/AppData/Local/Programs/Python/Python39/minieyes/'
+        folder = 'D:/minieyes/program/python/'
         self.todo = shelve.open(folder + 'statementdog/todo.txt')
         self.expire = shelve.open(folder + 'statementdog/expire.txt')
     def add_todo(self, records, condition = None):

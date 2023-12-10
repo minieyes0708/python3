@@ -42,6 +42,7 @@ class statementdog:
         # Extract Results #
         ###################
         results = self.waitfor(By.CSS_SELECTOR, 'td.r-td2')
+        results = self.web.find_elements(By.CSS_SELECTOR, 'td.r-td2')
         while len(results) == 0:
             time.sleep(1)
             results = self.web.find_elements_by_css_selector('td.r-td2')
@@ -90,6 +91,21 @@ class statementdog:
                 print('YOY = ' + tr.find_elements_by_tag_name('td')[0].text)
                 return tr.find_elements_by_tag_name('td')[0].text
         raise RuntimeError("YOY Not Found")
+    def get_data_table(self):
+        data_table = self.waitfor(By.CSS_SELECTOR, "li#dataTable table")
+        row_entries = data_table.find_elements(By.TAG_NAME, "tr")
+
+        take_index = []
+        recent3months = [td.text for td in row_entries[1].find_elements(By.TAG_NAME, "td")]
+        recent6months = [td.text for td in row_entries[2].find_elements(By.TAG_NAME, "td")]
+        recent12months = [td.text for td in row_entries[3].find_elements(By.TAG_NAME, "td")]
+        for i in range(len(recent3months)):
+            if recent3months[i] != '無' and recent6months[i] != '無' and recent12months[i] != '無':
+                take_index.append(i)
+        recent3months = [float(recent3months[i].replace(',', '')) for i in take_index]
+        recent6months = [float(recent6months[i].replace(',', '')) for i in take_index]
+        recent12months = [float(recent12months[i].replace(',', '')) for i in take_index]
+        return [recent3months, recent6months, recent12months]
 
 class record_handler:
     def __init__(self):
@@ -147,6 +163,7 @@ class interactive_console:
         print('7: [update2] all list1')
         print('8: [update3] tracking')
         print('9: [clear] todo')
+        print('10:[turning] find all turning stock and add to todo')
         print(f'current id {self.stockid} in {len(self.handler.todo)} stocks')
     def get_commands(self):
         if len(self.commands) == 0:
@@ -162,7 +179,7 @@ class interactive_console:
             self.dog.goto(self.stockid)
     def update(self):
         self.handler.add_todo(self.dog.select_stock('近三月營收年增率3個月內漲破近6月'))
-        self.handler.add_todo(dog.select_stock('近三月營收年增率3個月內漲破近12月'))
+        self.handler.add_todo(self.dog.select_stock('近三月營收年增率3個月內漲破近12月'))
         self.handler.show_todo()
         self.goto_last_stock()
     def show(self):
@@ -197,6 +214,29 @@ class interactive_console:
         self.goto_last_stock()
     def clear(self):
         handler.todo.clear()
+    def turning(self):
+        def find_next_turning_point(curv1, curv2, start_point):
+            while start_point >= 0:
+                if (curv1[start_point] - curv2[start_point]) * (curv1[start_point+1] - curv2[start_point+1]) < 0:
+                    return start_point
+                else:
+                    start_point -= 1
+            return start_point
+
+        records = self.dog.select_stock('近三月營收年增率3個月內漲破近6月')
+        print('len(records) = ', len(records))
+        for record in records:
+            print(f'goto {record["stockid"]}')
+            self.dog.goto(record['stockid'])
+            [recent3months, _, recent12months] = self.dog.get_data_table()
+            total_months = len(recent3months)
+            if recent3months[-1] > recent12months[-1]:
+                tp1 = find_next_turning_point(recent3months, recent12months, total_months - 2)
+                tp2 = find_next_turning_point(recent3months, recent12months, tp1-1)
+                if total_months - tp1 < 5 and tp1 - tp2 > 10:
+                    self.handler.todo[record['stockid']] = record
+                    print(f'added {record["stockid"]}')
+        self.goto_last_stock()
 
     def mainloop(self):
         while self.query not in self.quit_commands:

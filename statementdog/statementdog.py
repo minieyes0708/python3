@@ -225,8 +225,8 @@ class interactive_console:
 
         records = self.dog.select_stock('近三月營收年增率3個月內漲破近6月')
         print('len(records) = ', len(records))
-        for record in records:
-            print(f'goto {record["stockid"]}')
+        for i, record in enumerate(records):
+            print(f'goto {record["stockid"]}({i}/{len(records)})')
             self.dog.goto(record['stockid'])
             [recent3months, _, recent12months] = self.dog.get_data_table()
             total_months = len(recent3months)

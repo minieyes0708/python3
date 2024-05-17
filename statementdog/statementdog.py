@@ -9,6 +9,7 @@ class statementdog:
         self.waitfor(By.ID, 'user_email').send_keys('chenvey2@gmail.com')
         self.waitfor(By.ID, 'user_password').send_keys('shenfen520')
         self.web.find_element(By.CLASS_NAME, 'submit-btn').click()
+        return self
     def select_stock(self, revenue_option):
         import time
         from selenium.webdriver.support.ui import Select

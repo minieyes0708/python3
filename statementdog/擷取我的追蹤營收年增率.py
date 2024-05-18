@@ -16,15 +16,16 @@ dog.web.maximize_window()
 
 # get stock id list
 dog.waitfor(By.CLASS_NAME, 'stock-list')
-stock_ids = [
-    item.text.split()[0] for item in
+stock_id_names = [
+    item.text for item in
     dog.web.find_elements(By.CLASS_NAME, 'stock-id-name')]
 
 # capture monthly-revenue-yoy
-for stock_id in stock_ids:
+for stock_id_name in stock_id_names:
+    stock_id = stock_id_name.split()[0]
     print('goto {}'.format(stock_id))
     dog.web.get(url.format(stock_id))
     # wait for report shown up before capturing
     dog.waitfor(By.ID, 'report')
-    dog.web.save_screenshot(os.path.join(dirname, stock_id+'.jpg'))
+    dog.web.save_screenshot(os.path.join(dirname, stock_id_name +'.jpg'))
 dog.web.quit()

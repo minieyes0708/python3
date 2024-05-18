@@ -10,7 +10,7 @@ class statementdog:
         self.waitfor(By.ID, 'user_password').send_keys('shenfen520')
         self.web.find_element(By.CLASS_NAME, 'submit-btn').click()
         return self
-    def select_stock(self, revenue_option):
+    def select_stock(self, revenue_option = None):
         import time
         from selenium.webdriver.support.ui import Select
         ################
@@ -78,6 +78,7 @@ class statementdog:
                 raise
     def goto(self, stockid):
         self.web.get(f'https://statementdog.com/analysis/{stockid}/long-term-and-short-term-monthly-revenue-yoy')
+        return self
     def getYoY(self, stockid):
         import time
         self.web.get(f'https://statementdog.com/analysis/{stockid}')
@@ -107,6 +108,9 @@ class statementdog:
         recent6months = [float(recent6months[i].replace(',', '')) for i in take_index]
         recent12months = [float(recent12months[i].replace(',', '')) for i in take_index]
         return [recent3months, recent6months, recent12months]
+    def capture_monthly_revenue_yoy(self, stock_id, filename):
+        self.goto(stock_id).waitfor(By.ID, 'report')
+        self.web.save_screenshot(filename)
 
 class record_handler:
     def __init__(self):

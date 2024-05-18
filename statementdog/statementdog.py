@@ -39,10 +39,14 @@ class statementdog:
         # Start Select #
         ################
         self.web.find_element(By.LINK_TEXT, '開始選股').click()
+        ##############
+        # Select 台股 #
+        ##############
+        results = self.waitfor(By.CSS_SELECTOR, 'td.r-td2')
+        self.web.find_element(By.XPATH, '//li[@data-country-type="tw"]').click()
         ###################
         # Extract Results #
         ###################
-        results = self.waitfor(By.CSS_SELECTOR, 'td.r-td2')
         results = self.web.find_elements(By.CSS_SELECTOR, 'td.r-td2')
         while len(results) == 0:
             time.sleep(1)

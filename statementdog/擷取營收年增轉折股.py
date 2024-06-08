@@ -52,6 +52,7 @@ if len(records):
         for record in records:
             file.write('{stockid} {stockname}\n'.format(**record))
 else:
-    os.remove(filename)
+    if os.path.exists(filename):
+        os.remove(filename)
 
 dog.web.quit()

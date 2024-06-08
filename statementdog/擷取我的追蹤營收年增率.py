@@ -15,10 +15,10 @@ dog = statementdog.statementdog().login()
 dog.web.maximize_window()
 
 # get stock id list
-dog.waitfor(By.CLASS_NAME, 'stock-list')
+stock_list = dog.waitfor(By.CLASS_NAME, 'stock-list')
 stock_id_names = [
     item.text for item in
-    dog.web.find_elements(By.CLASS_NAME, 'stock-id-name')]
+    stock_list.find_elements(By.CLASS_NAME, 'stock-id-name')]
 
 # capture monthly-revenue-yoy
 for stock_id_name in stock_id_names:

@@ -27,5 +27,5 @@ for stock_id_name in stock_id_names:
     dog.web.get(url.format(stock_id))
     # wait for report shown up before capturing
     dog.waitfor(By.ID, 'report')
-    dog.web.save_screenshot(os.path.join(dirname, stock_id_name +'.jpg'))
+    dog.web.save_screenshot(os.path.join(dirname, stock_id_name +'.png'))
 dog.web.quit()

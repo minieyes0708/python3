@@ -138,6 +138,7 @@ class statementdog:
                 return tr.find_elements_by_tag_name('td')[0].text
         raise RuntimeError("YOY Not Found")
     def get_data_table(self):
+        import re
         data_table = self.waitfor(By.CSS_SELECTOR, "li#dataTable table")
         row_entries = data_table.find_elements(By.TAG_NAME, "tr")
 
@@ -148,9 +149,10 @@ class statementdog:
         for i in range(len(recent3months)):
             if recent3months[i] != '無' and recent6months[i] != '無' and recent12months[i] != '無':
                 take_index.append(i)
-        recent3months = [float(recent3months[i].replace(',', '')) for i in take_index]
-        recent6months = [float(recent6months[i].replace(',', '')) for i in take_index]
-        recent12months = [float(recent12months[i].replace(',', '')) for i in take_index]
+        check_float = re.compile(r"^[-+]?[0-9]*\.?[0-9]+$")
+        recent3months = [float(recent3months[i].replace(',', '')) if check_float.match(recent3months[i]) else float('nan') for i in take_index]
+        recent6months = [float(recent6months[i].replace(',', '')) if check_float.match(recent6months[i]) else float('nan') for i in take_index]
+        recent12months = [float(recent12months[i].replace(',', '')) if check_float.match(recent12months[i]) else float('nan') for i in take_index]
         return [recent3months, recent6months, recent12months]
     def capture_monthly_revenue_yoy(self, stock_id, filename):
         self.goto(stock_id).waitfor(By.ID, 'report')

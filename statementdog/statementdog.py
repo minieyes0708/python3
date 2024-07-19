@@ -59,6 +59,42 @@ class statementdog:
         for td in results:
             records.append(dict(zip(keys, td.text.split())))
         return records
+    def evin_select_stock(self):
+        import time
+        ################
+        # Select List1 #
+        ################
+        self.web.get('https://statementdog.com/screeners/custom')
+        self.web.find_element(By.LINK_TEXT, '清單3').click()
+        self.web.execute_script('importAll(2)')
+        self.web.execute_script('$(".menu-title").removeClass("selected");')
+        self.web.execute_script('$(".menu-title").eq(7).addClass("selected");')
+        self.web.execute_script('$(".menu_wrapper").hide();')
+        self.web.execute_script('$(".menu_wrapper").eq(7).show().find("li:visible").eq(0).trigger("click");')
+        ################
+        # Start Select #
+        ################
+        self.web.find_element(By.LINK_TEXT, '開始選股').click()
+        ##############
+        # Select 台股 #
+        ##############
+        results = self.waitfor(By.CSS_SELECTOR, 'td.r-td2')
+        self.web.find_element(By.XPATH, '//li[@data-country-type="tw"]').click()
+        ###################
+        # Extract Results #
+        ###################
+        results = self.web.find_elements(By.CSS_SELECTOR, 'td.r-td2')
+        while len(results) == 0:
+            time.sleep(1)
+            results = self.web.find_elements_by_css_selector('td.r-td2')
+        ###############
+        # Get Records #
+        ###############
+        records = []
+        keys = ('stockid', 'stockname')
+        for td in results:
+            records.append(dict(zip(keys, td.text.split())))
+        return records
     def select_tracking(self):
         self.web.get('https://statementdog.com/feeds')
         div = self.waitfor(By.CLASS_NAME, 'stock-list')

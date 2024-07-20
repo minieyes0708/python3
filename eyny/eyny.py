@@ -12,7 +12,7 @@ class eyny:
         while not self.web.find_element(By.NAME, "username").is_displayed():
             time.sleep(1)
         self.web.find_element(By.NAME, "username").send_keys('chenvey2')
-        self.web.find_element(By.NAME, "password").send_keys(getpass.getpass('密碼: '))
+        self.web.find_element(By.NAME, "password").send_keys(getpass.getpass())
         Select(self.web.find_element(By.NAME, 'questionid')).select_by_index(1)
         self.web.find_element(By.NAME, "answer").send_keys(getpass.getpass('母親名字: '))
         self.web.find_element(By.NAME, "loginsubmit").click()

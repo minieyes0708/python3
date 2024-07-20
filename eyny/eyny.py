@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 class eyny:
     def __init__(self):
         import dbm
@@ -6,12 +8,12 @@ class eyny:
         self.db = dbm.open("./eyny/db/eyny", "c")
         self.web = webdriver.Chrome()
         self.web.get("http://www05.eyny.com/index.php")
-        self.web.find_element_by_link_text("登錄").click()
-        while not self.web.find_element_by_name("username").is_displayed():
+        self.web.find_element(By.LINK_TEXT, "登錄").click()
+        while not self.web.find_element(By.NAME, "username").is_displayed():
             time.sleep(1)
-        self.web.find_element_by_name("username").send_keys('chenvey2')
-        self.web.find_element_by_name("password").send_keys('shenfen520')
-        self.web.find_element_by_name("loginsubmit").click()
+        self.web.find_element(By.NAME, "username").send_keys('chenvey2')
+        self.web.find_element(By.NAME, "password").send_keys('shenfen520')
+        self.web.find_element(By.NAME, "loginsubmit").click()
         time.sleep(5)
     def __del__(self):
         # self.web.quit()
@@ -29,36 +31,50 @@ class eyny:
             del self.db[key]
     def count(self):
         return len(self.db.keys())
-    def waitfor(self, attrname, *args):
+    def waitforall(self, by, *args):
         import time
-        import selenium
+        start = time.time()
         while True:
             try:
-                return self.web.__getattribute__(attrname)(*args)
+                return self.web.find_elements(by, *args)
+            except:
+                raise
+    def waitfor(self, by, *args):
+        import time
+        import selenium
+        start = time.time()
+        timeout = args['timeout'] if 'timeout' in args else 10
+        while True:
+            try:
+                return self.web.find_element(by, *args)
             except selenium.common.exceptions.NoSuchElementException:
+                print('waiting for ' + by + ' ' + ' '.join(str(v) for v in args))
+                if time.time() - start > timeout:
+                    if self.web.find_element(By.ID, 'content-title').text == '沒有這個頁面喔!':
+                        raise RuntimeError('Page not found')
                 time.sleep(1)
             except:
                 raise
     def goto(self, where):
         if where == '本土電影':
             # self.web.get("http://www05.eyny.com/forum-576-1.html")
-            self.waitfor('find_element_by_link_text', '成人電影(上傳空間)').click()
-            self.waitfor('find_element_by_link_text', '成人電影(上傳空間)').click()
-            self.waitfor('find_element_by_name', 'submit').click()
-            self.waitfor('find_element_by_link_text', '本土電影(上傳空間)').click()
+            self.waitfor(By.LINK_TEXT, '成人電影(上傳空間)').click()
+            self.waitfor(By.LINK_TEXT, '成人電影(上傳空間)').click()
+            self.waitfor(By.NAME, 'submit').click()
+            self.waitfor(By.LINK_TEXT, '本土電影(上傳空間)').click()
         elif where == '日韓電影':
             # self.web.get("http://www05.eyny.com/forum-576-1.html")
-            self.waitfor('find_element_by_link_text', '成人電影(上傳空間)').click()
-            self.waitfor('find_element_by_link_text', '成人電影(上傳空間)').click()
-            self.waitfor('find_element_by_name', 'submit').click()
-            self.waitfor('find_element_by_link_text', '日韓電影(上傳空間)').click()
+            self.waitfor(By.LINK_TEXT, '成人電影(上傳空間)').click()
+            self.waitfor(By.LINK_TEXT, '成人電影(上傳空間)').click()
+            self.waitfor(By.NAME, 'submit').click()
+            self.waitfor(By.LINK_TEXT, '日韓電影(上傳空間)').click()
         else:
             self.web.get(where)
     def confirm18(self):
         import time
         submit = [
             tag
-            for tag in self.waitfor('find_elements_by_tag_name', 'input')
+            for tag in self.waitforall(By.TAG_NAME, 'input')
             if '18歲' in tag.get_attribute('value')
         ]
         if len(submit):
@@ -75,11 +91,11 @@ class eyny:
             return False
         return [
             val.get_attribute('href')
-            for val in self.web.find_elements_by_tag_name('a')
+            for val in self.web.find_elements(By.TAG_NAME, 'a')
             if val.get_attribute('href') != None and is_valid_url(val.get_attribute('href'))
         ] + [
             line
-            for td in self.web.find_elements_by_tag_name('td')
+            for td in self.web.find_elements(By.TAG_NAME, 'td')
             for line in td.text.split('\n')
             if 'https://' in line and is_valid_url(line[line.index('https://'):])
         ]
@@ -87,7 +103,7 @@ class eyny:
     def get_passwords(self):
         return [
             line
-            for td in self.web.find_elements_by_tag_name('td')
+            for td in self.web.find_elements(By.TAG_NAME, 'td')
             for line in td.text.split('\n')
             if '解壓密碼' in line
         ]

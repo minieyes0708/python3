@@ -1,9 +1,9 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
 
 class eyny:
     def __init__(self):
-        import dbm
-        import time
+        import dbm, time, getpass
         from selenium import webdriver
         self.db = dbm.open("./eyny/db/eyny", "c")
         self.web = webdriver.Chrome()
@@ -12,7 +12,9 @@ class eyny:
         while not self.web.find_element(By.NAME, "username").is_displayed():
             time.sleep(1)
         self.web.find_element(By.NAME, "username").send_keys('chenvey2')
-        self.web.find_element(By.NAME, "password").send_keys('shenfen520')
+        self.web.find_element(By.NAME, "password").send_keys(getpass.getpass('密碼: '))
+        Select(self.web.find_element(By.NAME, 'questionid')).select_by_index(1)
+        self.web.find_element(By.NAME, "answer").send_keys(getpass.getpass('母親名字: '))
         self.web.find_element(By.NAME, "loginsubmit").click()
         time.sleep(5)
     def __del__(self):

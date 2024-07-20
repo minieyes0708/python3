@@ -109,12 +109,13 @@ class statementdog:
         import time
         import selenium
         start = time.time()
+        timeout = args['timeout'] if 'timeout' in args else 10
         while True:
             try:
                 return self.web.find_element(by, *args)
             except selenium.common.exceptions.NoSuchElementException:
                 print('waiting for ' + by + ' ' + ' '.join(str(v) for v in args))
-                if time.time() - start > 10:
+                if time.time() - start > timeout:
                     if self.web.find_element(By.ID, 'content-title').text == '沒有這個頁面喔!':
                         raise RuntimeError('Page not found')
                 time.sleep(1)

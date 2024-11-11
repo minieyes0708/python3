@@ -15,6 +15,7 @@ dog = statementdog.statementdog().login()
 dog.web.maximize_window()
 
 # get stock id list
+dog.web.get('https://statementdog.com/feeds')
 stock_list = dog.waitfor(By.CLASS_NAME, 'stock-list')
 stock_id_names = [
     item.text for item in

@@ -64,7 +64,12 @@ class statementdog:
         ################
         # Select List1 #
         ################
-        self.web.get('https://statementdog.com/screeners/custom')
+        results = self.waitfor(By.CSS_SELECTOR, 'button.navi-button-dropdown.navi-button-pick-stock')
+        self.web.find_element(By.CSS_SELECTOR, 'button.navi-button-dropdown.navi-button-pick-stock').click()
+        results = self.waitfor(By.LINK_TEXT, '自訂選股')
+        self.web.find_element(By.LINK_TEXT, '自訂選股').click()
+        # self.web.get('https://statementdog.com/screeners/custom')
+        results = self.waitfor(By.LINK_TEXT, '清單3')
         self.web.find_element(By.LINK_TEXT, '清單3').click()
         self.web.execute_script('importAll(2)')
         self.web.execute_script('$(".menu-title").removeClass("selected");')
